@@ -1,18 +1,4 @@
-:root {
-  --bg-dark-accent: rgb(23, 29, 75);
-  --body-accent: #dbf5fa;
-  --text-color: black;
-  --horizontal-gradient:linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-  --text-dark-accent: #13181c;
-  --bg-accent: #eefcff;
-  --text-accent: rgb(46, 211, 198);
-  --transition: 0.3s ease;
-  --nav-margin: 80px;
-  --transparent-overlay: linear-gradient(
-    rgba(124, 89, 163, 0.45), 
-    rgba(124, 89, 163, 0.45)
-  );
-}
+@import "colors.css";
 * {
   margin: 0;
 }
@@ -96,6 +82,7 @@ header {
 }
 .hamburger.active span:first-child {
   transform: translateY(-2px) rotate(-45deg);
+  background-color: var(--bg-dark-accent);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -104,6 +91,7 @@ header {
 
 .hamburger.active span:last-child {
   transform: translateY(2px) rotate(45deg);
+  background-color: var(--bg-dark-accent);
 }
 .nav-links a::before {
   position: absolute;
@@ -133,7 +121,7 @@ header {
 
 .nav-head > p,
 .nav-links > a {
-  color: var(--bg-dark-accent);
+  color: var(--bg-accent);
   text-decoration: none;
 }
 .nav-main {
@@ -200,22 +188,67 @@ header {
 
 
 .first-section{
-  width: 100%;
-
   background: var(--transparent-overlay)
   , url("../assets/img/hero1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  
+}
+.first-section .content-wrap{
+  padding: 0 10em;
+  height: 100vh;
   display: flex;
-
+  align-items: center;
 }
-.first-section div{
-  padding: 10em;
-  color: var(--horizontal-gradient);
+.first-section h1{
+  background: -webkit-linear-gradient(0.5turn, #e08a27, #b42dcf);
+  background-clip: var(--horizontal-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: xx-large;
 }
-h1{
-  color: var(--horizontal-gradient) ;
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+.btn-three {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-three::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+.btn-three:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-three::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
 }
