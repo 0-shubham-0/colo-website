@@ -1,0 +1,21 @@
+.event-body,.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event-head{
+    display: flex;
+}
+.date{
+    padding: 1em 5em;
+    align-items: center;
+    cursor: pointer;
+    background-color: blanchedalmond;
+    transition: background-color 0.3s ease-in;
+}
+.date:hover{
+    background-color: rgb(212, 93, 93);
+}
+.row{
+    padding: 1em auto;
+}
