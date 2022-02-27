@@ -17,5 +17,6 @@
     background-color: rgb(212, 93, 93);
 }
 .row{
+    display:  block;
     padding: 1em auto;
 }
