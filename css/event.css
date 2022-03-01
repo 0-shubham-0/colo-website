@@ -28,6 +28,10 @@
 .row{
     padding: 1rem 0;
 }
+.row.hide{
+    display: none;
+}
+
 .date.active{
     background-color: rgb(212, 93, 93);
 }
