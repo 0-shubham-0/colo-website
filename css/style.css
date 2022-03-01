@@ -482,7 +482,15 @@ nav {
   display: flex;
   gap: 2em;
 }
-
+@media screen and (max-width: 1100px){
+  .card{
+    flex-direction: column;
+    gap: 5em;
+  }
+  .events .content-wrap{
+    height: 230vh;
+  }
+}
 
 /* 
 .container{
