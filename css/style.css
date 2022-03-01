@@ -436,7 +436,10 @@ nav {
 }
 
 
-
+.events{
+  padding-top: 4rem;
+  background-color: rgba(246, 4, 124, 0.09);
+}
 .events>.content-wrap{
   flex-direction: column;
 }
@@ -474,7 +477,10 @@ nav {
   background-color: rgb(209, 207, 207);
   transform: scaleX(0.8);
 }
-
+.card{
+  display: flex;
+  gap: 2em;
+}
 
 
 /* 
