@@ -25,3 +25,21 @@
   --color-five: #8c24d4;
   --color-black: #080101;
 }
+
+@font-face {
+  font-family: "Hanson";
+  src: url("../fonts/Hanson-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Baskerville";
+  src: url("../fonts/Baskerville-Regular.ttf");
+}
+@font-face {
+  font-family: "Crete";
+  src: url("../fonts/CreteRound-Regular.ttf");
+}
+@font-face {
+  font-family: "Mont";
+  src: url("../fonts/Mont-HeavyDEMO.otf");
+}
