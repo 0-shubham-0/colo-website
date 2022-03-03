@@ -1,6 +1,7 @@
 
 //const navBar = document.querySelector
 var myNav = document.getElementById('mynav');
+var navText = document.getElementsByClassName('nav-text')
 var vh =window.innerHeight/2;
 window.onscroll = function () { 
     "use strict";
@@ -11,6 +12,8 @@ window.onscroll = function () {
     else {
         myNav.classList.add("nav-transparent");
         myNav.classList.remove("nav-colored");
+        navText.classList.remove("nav-text-black");
+        navText.classList.add("nav-text-white");
     }
 };
 const hamburger = document.querySelector(".hamburger");
