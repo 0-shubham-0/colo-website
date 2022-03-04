@@ -1,5 +1,6 @@
 let dates = document.querySelectorAll(".date");
-let rows = document.querySelectorAll(".accordion");
+let rows = document.querySelectorAll(".eventList");
+let currEvents =
 dates.forEach(n => n.addEventListener("click", ClickHandler));
 
 function ClickHandler(){

@@ -1,111 +1,124 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 /* Baskerville Font */
-.timeline .content-wrap{
-    align-items:flex-start;
+.timeline .content-wrap {
+  align-items: flex-start;
 }
-.event-body ul{
-    display:flex;
+.event-body ul {
+  display: flex;
 }
-.event-date>li{
-    width: 33.33%;
-    align-self: stretch;
+.event-date > li {
+  width: 33.33%;
+  align-self: stretch;
 }
-.event-body,.date,.event {
+.event-body,
+.date,
+.event {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
-.event{
-    list-style: none;
-    width: 60vw;
+.event {
+  list-style: none;
+  width: 60vw;
+}
+#eventList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
-.date{
-    padding: 1em 0;
-    min-width: 200px;
-    cursor: pointer;
-    background-color: blanchedalmond;
-    transition: background-color 0.3s ease-in;
+.date {
+  padding: 1em 0;
+  min-width: 200px;
+  cursor: pointer;
+  background-color: blanchedalmond;
+  transition: background-color 0.3s ease-in;
 }
-.date:hover{
-    background-color: rgb(255, 173, 173);
+.date:hover {
+  background-color: rgb(255, 173, 173);
 }
-.accordion{
-    position: relative;
-    width: 100%;
-    padding: 1rem 0rem 1rem 0.5rem;
+.accordion {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0rem 1rem 0.5rem;
 }
-.accordion div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.accordion div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.accordion span{
-    display: none;
-    overflow-wrap: normal;
+.accordion span {
+  display: none;
+  overflow-wrap: normal;
 }
-.accordion::after{
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 100%; 
-    height: 1px; 
-    background-color: rgb(212, 93, 93);
+.accordion::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgb(212, 93, 93);
 }
-.accordion.hide{
-    display: none;
+.eventList.hide {
+  display: none;
 }
-
-.date.active{
-    position: relative;
-    background-color: rgb(212, 93, 93);
-}
-.date.active::after{
-    display: block;
-    position: absolute;
-    bottom: -8px;
-    content: '';
-    width: 0; 
-    height: 0; 
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid rgb(212, 93, 93);
+.eventList.active {
+  display: block;
+  transition: ;
 }
 
-
-.accordion > .accordion-toggle{
-position: absolute;
-opacity: 0;
-display: none;
+.date.active {
+  position: relative;
+  background-color: rgb(212, 93, 93);
+}
+.date.active::after {
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgb(212, 93, 93);
 }
 
-.accordion > label{
-position: relative;
-display: flex;
-justify-content: space-between;
-height: 50px;
-line-height: 50px;
-padding: 0 20px;
-font-size: 14px;
-font-weight: 700;
-cursor: pointer;
+.accordion > .accordion-toggle {
+  position: absolute;
+  opacity: 0;
+  display: none;
 }
 
-.accordion > section{
-height: 0;
-transition: .3s all;
-overflow: hidden;
-}
-.accordion > .accordion-toggle:checked ~ .gg-chevron-down::after{
- transform: rotate(180deg);
+.accordion > label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.accordion > .accordion-toggle:checked ~ section{
-  height: 200px;
+.accordion > section {
+  max-height: 0;
+  overflow: hidden;
+  /* Set our transitions up. */
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+  transition: 0.3s all;
+}
+.accordion > .accordion-toggle:checked ~ .gg-chevron-down::after {
+  transform: rotate(180deg);
+}
+
+.accordion > .accordion-toggle:checked ~ section {
+  max-height: 200px;
 }
 
 .accordion > section p {
