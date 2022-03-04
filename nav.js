@@ -1,23 +1,40 @@
 
 //const navBar = document.querySelector
 var myNav = document.getElementById('mynav');
-var navText = document.getElementsByClassName('nav-text')
-var vh =window.innerHeight/2;
+var navTexts = document.getElementsByClassName('nav-text');
+const hamburger = document.querySelector(".hamburger");
+const navlinks = document.querySelector(".nav-links");
+var vh = window.innerHeight/8;
+const navLink = document.querySelectorAll(".nav-links>a");
+
 window.onscroll = function () { 
     "use strict";
     if (document.body.scrollTop >= vh || document.documentElement.scrollTop >= vh ) {
         myNav.classList.add("nav-colored");
         myNav.classList.remove("nav-transparent");
+        for(var i=0; i<5; i++)
+        {
+            navTexts[i].classList.remove("nav-txt-white");
+            navTexts[i].classList.add("nav-txt-black");
+            // navTexts[i].classList.add("gradient-text");
+        }
+        // hamburger.style.color = 'black';
+        console.log('black');
     } 
     else {
         myNav.classList.add("nav-transparent");
         myNav.classList.remove("nav-colored");
-        navText.classList.remove("nav-text-black");
-        navText.classList.add("nav-text-white");
+        for(var i=0; i<5; i++)
+        {
+            navTexts[i].classList.remove("nav-txt-black");
+            navTexts[i].classList.add("nav-txt-white");
+            // navTexts[i].classList.remove("gradient-text");
+        }
+        // hamburger.style.color = 'white';
+        console.log('white');
     }
 };
-const hamburger = document.querySelector(".hamburger");
-const navlinks = document.querySelector(".nav-links");
+
 
 hamburger.addEventListener("click", mobileMenu);
 
@@ -25,7 +42,7 @@ function mobileMenu() {
     hamburger.classList.toggle("active");
     navlinks.classList.toggle("active");
 }
-const navLink = document.querySelectorAll(".nav-links>a");
+
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 

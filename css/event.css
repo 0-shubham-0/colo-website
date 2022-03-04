@@ -5,7 +5,11 @@
     align-items:flex-start;
 }
 .event-body ul{
-    display:inline-flex;
+    display:flex;
+}
+.event-date>li{
+    width: 33.33%;
+    align-self: stretch;
 }
 .event-body,.date,.event {
   display: flex;
@@ -15,11 +19,9 @@
 }
 .event{
     list-style: none;
+    width: 60vw;
 }
-.event-body ul{
-    display: flex;
-    width: -webkit-fill-available;
-}
+
 .date{
     padding: 1em 0;
     min-width: 200px;
@@ -30,21 +32,21 @@
 .date:hover{
     background-color: rgb(255, 173, 173);
 }
-.row{
+.accordion{
     position: relative;
     width: 100%;
     padding: 1rem 0rem 1rem 0.5rem;
 }
-.row div{
+.accordion div{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.row span{
+.accordion span{
     display: none;
     overflow-wrap: normal;
 }
-.row::after{
+.accordion::after{
     display: block;
     position: absolute;
     bottom: 0;
@@ -54,7 +56,7 @@
     height: 1px; 
     background-color: rgb(212, 93, 93);
 }
-.row.hide{
+.accordion.hide{
     display: none;
 }
 
@@ -72,4 +74,43 @@
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-top: 8px solid rgb(212, 93, 93);
+}
+
+
+.accordion > .accordion-toggle{
+position: absolute;
+opacity: 0;
+display: none;
+}
+
+.accordion > label{
+position: relative;
+display: flex;
+justify-content: space-between;
+height: 50px;
+line-height: 50px;
+padding: 0 20px;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+}
+
+.accordion > section{
+height: 0;
+transition: .3s all;
+overflow: hidden;
+}
+.accordion > .accordion-toggle:checked ~ .gg-chevron-down::after{
+ transform: rotate(180deg);
+}
+
+.accordion > .accordion-toggle:checked ~ section{
+  height: 200px;
+}
+
+.accordion > section p {
+  margin: 15px 0;
+  padding: 0 20px;
+  font-size: 12px;
+  line-height: 1.5;
 }

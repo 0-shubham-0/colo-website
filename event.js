@@ -1,5 +1,5 @@
 let dates = document.querySelectorAll(".date");
-let rows = document.querySelectorAll(".row");
+let rows = document.querySelectorAll(".accordion");
 dates.forEach(n => n.addEventListener("click", ClickHandler));
 
 function ClickHandler(){
