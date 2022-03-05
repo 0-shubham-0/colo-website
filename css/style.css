@@ -148,7 +148,7 @@ nav {
   opacity: 1;
   background-size: 200%;
   background-image: linear-gradient(45deg,var(--color-four), var(--color-one), var(--color-two));
-  animation: anim 15s infinite alternate;
+  animation: anim 25s infinite alternate;
   transition: all 0.3s;
 }
 .nav-links .btn-three:hover::after {
@@ -549,7 +549,7 @@ width:100%;
     align-items: center;
   }
   .events .content-wrap{
-    height: 230vh;
+    min-height: 230vh;
   }
 }
 
