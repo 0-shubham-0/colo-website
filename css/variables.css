@@ -1,11 +1,5 @@
 :root {
-  --bg-dark-accent: rgb(23, 29, 75);
-  --body-accent: #dbf5fa;
-  --text-color: black;
   --horizontal-gradient: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-  --text-dark-accent: #13181c;
-  --bg-accent: #eefcff;
-  --text-accent: rgb(46, 211, 198);
   --transition: 0.3s ease;
   --nav-margin: 80px;
   --transparent-overlay: linear-gradient(
@@ -23,6 +17,7 @@
   --color-three: #1d3ec3;
   --color-four: #091e8b;
   --color-five: #8c24d4;
+  --color-white:#ebf8e1;
   --color-black: #080101;
 }
 

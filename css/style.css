@@ -17,8 +17,8 @@ body {
   position: relative;
   /* font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI","Helvetica Neue", Arial, sans-serif; */
   font-family: "Baskerville",serif;
-  color: var(--text-color);
-  background-color: #ffffff;
+  color: var(--color-black);
+  background-color: var(--color-white);
   overflow-x: hidden;
 }
 
@@ -26,7 +26,7 @@ body {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0);
+  background: var(--color-black);
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgba(229, 160, 231, 0.733);
@@ -40,29 +40,34 @@ html {
   /* Fallback color. */
   background-color: red;
   /* the gradient. */
-  background-image: linear-gradient(45deg, #c042c0, #bda625);
+  background-image: linear-gradient(45deg, var(--color-one), var(--color-five), var(--color-two));
   
   /* background size and repeat properties. */
   background-size: 100%;
   background-repeat: no-repeat;
 
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
+  /* background-clip: text; */
   -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
+  /* -moz-background-clip: text; */
   -moz-text-fill-color: transparent;
+  /* animation: anim 10s infinite alternate; */
+}
+@keyframes anim{
+  0%{background-position: left;}
+  100%{background-position: right;}
 }
 /* || Navigation Bar CSS */
 nav {
   font-family:'Hanson',sans-serif;
   font-size: 20px;
-  box-shadow: 2rem var(--bg-dark-accent);
+  box-shadow: 2rem var(--color-black);
   position: fixed;
   width: 100%;
   z-index: 99;
 }
 .nav-colored {
   background-color: hsla(0, 0%, 100%, 0.301);
-  backdrop-filter: blur(2px);
   opacity: 1;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.363);
 }
@@ -97,24 +102,55 @@ nav {
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  /* color: var(--text-dark-accent); */
   transition: ease-in-out 250ms;
 }
-/* .nav-text-white{
-  color: white;
-}
-.nav-text-black{
-  color: black;
-} */
 .nav-text {
   text-decoration: none;
 }
 .nav-txt-black{
-  color: #000000;
+  color: var(--color-black);
 }
 .nav-txt-white{
-  color: #f7f7f7;
+  color: var(--color-white);
 }
+.nav-links.btn-three {
+  background-color: var(--color-two);
+  transition: all 0.5s;
+  position: relative;
+}
+.nav-links.btn-three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+}
+.nav-links.btn-three:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.nav-links.btn-three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.nav-links.btn-three:hover::after {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+
 .hamburger {
   display: none;
   padding: 0;
@@ -123,56 +159,59 @@ nav {
 }
 .hamburger > span {
   display: block;
-  width: 25px;
+  width: 30px;
   height: 3px;
-  margin: 2px 20px;
+  margin: 3px 20px;
   transform-origin: right;
   transition: all 0.3s ease-in-out;
-  background-color: var(--bg-accent);
+  background-color: var(--color-white);
 }
 .hamburger span:first-child {
-  transform: scaleX(1);
+  transform: scaleX(0.5);
+  transform-origin:left;
 }
 
 .hamburger span:nth-child(2) {
-  transform: scaleX(1.2);
+  transform: scaleX(1);
+  transform-origin:center center;
 }
 
 .hamburger span:last-child {
-  transform: scaleX(0.8);
-}
-.hamburger:hover span {
-  transform: scaleX(1);
+  transform: scaleX(0.5);
+  transform-origin:right;
 }
 .hamburger.active span:first-child {
-  transform: translateY(-2px) rotate(-45deg);
-  background-color: var(--bg-dark-accent);
+  transform:translateX(6px) rotate(45deg) scaleX(0.5);
+  background-color: var(--color-black);
 }
 
 .hamburger.active span:nth-child(2) {
-  opacity: 0;
+  transform: rotate(-45deg) scaleX(0.85);
+  background-color: var(--color-black);
 }
 
 .hamburger.active span:last-child {
-  transform: translateY(2px) rotate(45deg);
-  background-color: var(--bg-dark-accent);
+  transform:translateX(-6px) rotate(45deg) scaleX(0.5);
+  background-color: var(--color-black);
 }
 .nav-links a::before {
   position: absolute;
   content: "";
   display: block;
-  bottom: 0;
+  bottom: -10px;
+  left: 0;
   width: 0%;
   height: 3px;
-  background: var(--text-dark-accent);
+  background: var(--color-black);
   transition: ease-in-out 250ms;
 }
+
 .nav-head > p {
   margin-bottom: 0%;
 }
 .nav-head > p:hover,
-.nav-links > p:hover {
-  opacity: 0.7;
+.nav-links > a:hover {
+  opacity: 0.8;
 }
 .nav-head > p:focus-within::before,
 .nav-links > a:focus-within::before {
@@ -180,14 +219,14 @@ nav {
 }
 .nav-head > p:hover::before,
 .nav-links > a:hover::before {
-  width: 100%;
+width:100%;
 }
 .nav-main {
   margin: 0 var(--nav-margin);
   transition: 250ms ease-out;
 }
 .nav-img {
-  box-shadow: #eefcff;
+  box-shadow: var(--color-white);
   width: 80px;
   height: 80px;
   transition: 250ms ease-out;
@@ -222,7 +261,7 @@ nav {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
   .nav-links > a {
-    color: var(--bg-dark-accent);
+    color: var(--color-black);
     margin: 2.5rem 0;
   }
 
@@ -234,7 +273,7 @@ nav {
   .hamburger {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     cursor: pointer;
   }
 }
@@ -271,7 +310,8 @@ nav {
 
 }
 .line span {
-  background-image: linear-gradient(92deg, #f87c57, #f2296f);
+  /* background-image: linear-gradient(92deg, #f87c57, #f2296f); */
+  background: linear-gradient(45deg, var(--color-two), var(--color-five));
   width: 60px;
   height: 3px;
   top: -1px;
@@ -309,7 +349,7 @@ nav {
   }
 }
 .first-section h1 {
-  background: -webkit-linear-gradient(0.5turn, #e08a27, #b42dcf);
+  /* background: -webkit-linear-gradient(0.5turn, #e08a27, #b42dcf); */
   background-clip: var(--horizontal-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -323,7 +363,7 @@ nav {
   cursor: pointer;
 }
 .btn-three {
-  color: #fff;
+  color: var(--color-white);
   transition: all 0.5s;
   position: relative;
 }
@@ -412,14 +452,14 @@ nav {
   position:relative;
   top: 150px;
   left: px;
-  border: 1px solid #000000;
+  border: 1px solid var(--color-black);
   z-index: 1;
 }
 .img-2{
   position:relative;
   top: -100px;
   left: -100px;
-  border: 1px solid #000000;
+  border: 1px solid var(--color-black);
   z-index: 2;
 }
 @media screen and (max-width: 1100px){
@@ -749,6 +789,9 @@ nav {
   .main-info-wrap{
     flex-direction: column;
   }
+  .coming-soon__item{
+    font-size: smaller;
+  }
 }
 @media only screen and (max-width:830px) {
   .coming-soon__item-wrap .coming-soon__item{
@@ -824,7 +867,7 @@ nav {
   aspect-ratio: 1/1;
   position: relative;
   padding: 1.5rem;
-  color: #ffffff;
+  color: var(--color-white);
   backface-visibility: hidden;
   text-decoration: none;
   overflow: hidden;
@@ -915,7 +958,7 @@ nav {
 }
 
 .speaker-content .profile:focus {
-  outline: 0.5rem solid white;
+  outline: 0.5rem solid var(--color-white);
   outline-offset: -0.5rem;
 }
 
@@ -980,7 +1023,7 @@ nav {
 }
 
 .footer-distributed h3 {
-  color: #ffffff;
+  color: var(--color-white);
   font: normal 36px 'Cookie', cursive;
   margin: 0;
 }
@@ -996,7 +1039,7 @@ nav {
 /* Footer links */
 
 .footer-distributed .footer-links {
-  color: #ffffff;
+  color: var(--color-white);
   margin: 20px 0 12px;
 }
 
@@ -1023,7 +1066,7 @@ nav {
 
 .footer-distributed .footer-center i {
   background-color: #33383b;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 25px;
   width: 38px;
   height: 38px;
@@ -1041,7 +1084,7 @@ nav {
 
 .footer-distributed .footer-center p {
   display: inline-block;
-  color: #ffffff;
+  color: var(--color-white);
   vertical-align: middle;
   margin: 0;
 }
@@ -1075,7 +1118,7 @@ nav {
 
 .footer-distributed .footer-company-about span {
   display: block;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -1093,7 +1136,7 @@ nav {
   background-color: #33383b;
   border-radius: 2px;
   font-size: 20px;
-  color: #ffffff;
+  color: var(--color-white);
   text-align: center;
   line-height: 35px;
   margin-right: 3px;

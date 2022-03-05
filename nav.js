@@ -3,6 +3,7 @@
 var myNav = document.getElementById('mynav');
 var navTexts = document.getElementsByClassName('nav-text');
 const hamburger = document.querySelector(".hamburger");
+const hamburgers = document.querySelectorAll(".hamburger>span");
 const navlinks = document.querySelector(".nav-links");
 var vh = window.innerHeight/8;
 const navLink = document.querySelectorAll(".nav-links>a");
@@ -16,10 +17,12 @@ window.onscroll = function () {
         {
             navTexts[i].classList.remove("nav-txt-white");
             navTexts[i].classList.add("nav-txt-black");
+
             // navTexts[i].classList.add("gradient-text");
         }
-        // hamburger.style.color = 'black';
-        console.log('black');
+        hamburgers.forEach(hamburger => {
+            hamburger.style.backgroundColor = 'var(--color-black)';   
+        });     
     } 
     else {
         myNav.classList.add("nav-transparent");
@@ -30,8 +33,9 @@ window.onscroll = function () {
             navTexts[i].classList.add("nav-txt-white");
             // navTexts[i].classList.remove("gradient-text");
         }
-        // hamburger.style.color = 'white';
-        console.log('white');
+        hamburgers.forEach(hamburger => {
+            hamburger.style.backgroundColor = 'var(--color-white)';   
+        });    
     }
 };
 
