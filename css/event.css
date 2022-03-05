@@ -67,7 +67,7 @@
 }
 .eventList.active {
   display: block;
-  transition: ;
+  /* transition: ; */
 }
 
 .date.active {
