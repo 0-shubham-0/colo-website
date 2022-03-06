@@ -759,6 +759,7 @@ width:100%;
 
 .time .content-wrap{
   background-color: var(--transparent-one);
+  background: linear-gradient(#dfbfa5, #f0f0f0);
 }
 /* Remaining Time */
 .coming-soon__item-wrap, .main-info-wrap{
