@@ -57,7 +57,7 @@ function closeMenu() {
 
 
 const countdown = () =>{
-    const newDate = new Date('March 6, 2022 00:00:00').getTime();
+    const newDate = new Date('March 30, 2022 00:00:00').getTime();
     const now = new Date().getTime();
     let gap = newDate - now;
 
