@@ -13,6 +13,8 @@ window.onscroll = function () {
     if (document.body.scrollTop >= vh || document.documentElement.scrollTop >= vh ) {
         myNav.classList.add("nav-colored");
         myNav.classList.remove("nav-transparent");
+        document.getElementById("logo").src="./assets/img/logo.png";
+        
         for(var i=0; i<5; i++)
         {
             navTexts[i].classList.remove("nav-txt-white");
@@ -27,6 +29,7 @@ window.onscroll = function () {
     else {
         myNav.classList.add("nav-transparent");
         myNav.classList.remove("nav-colored");
+        document.getElementById("logo").src="./assets/img/colologo.png";
         for(var i=0; i<5; i++)
         {
             navTexts[i].classList.remove("nav-txt-black");
