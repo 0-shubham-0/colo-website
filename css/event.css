@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 /* Baskerville Font */
 .timeline .content-wrap {
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* .event-date{
+  flex: 1;
+} */
+ul{
+  padding: 0%;
 }
 .event-body ul {
-  display: flex;
+  display: inline-flex;
+  width: -webkit-fill-available;
 }
-.event-date > li {
-  width: 33.33%;
-  align-self: stretch;
+.event-date {
+  flex: 1;
 }
 .event-body,
 .date,
@@ -26,11 +34,13 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .date {
+  flex: 1;
   padding: 1em 0;
-  min-width: 200px;
+  min-width: 130px;
   cursor: pointer;
   background-color: blanchedalmond;
   transition: background-color 0.3s ease-in;

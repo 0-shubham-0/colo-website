@@ -67,9 +67,9 @@ nav {
   z-index: 99;
 }
 .nav-colored {
-  background-color: hsla(0, 0%, 100%, 0.514);
-  backdrop-filter: blur(3px);
+  background-color: hsla(0, 0%, 100%, 0.651);
   opacity: 1;
+  backdrop-filter: blur(5px);
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.363);
 }
 .nav-transparent {
@@ -230,6 +230,10 @@ nav {
 .nav-links > a:hover::before {
 width:100%;
 }
+.nav-head > p:last-child::before,
+.nav-links > a:last-child::before {
+width:0%;
+}
 .nav-main {
   margin: 0 var(--nav-margin);
   transition: 250ms ease-out;
@@ -255,29 +259,31 @@ width:100%;
   .nav-links {
     position: fixed;
     right: -100%;
-
+    top: 0;
     flex-direction: column;
     justify-content: flex-start;
     background-color: rgba(221, 221, 221, 0.8);
     width: 100%;
     line-height: 0.1;
-    top: 0;
-    padding-top: 4rem;
-    height: 100%;
+    padding-top: 5rem;
+    height: 100vh;
     border-radius: 5px;
     text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s;
   }
   .nav-links > a {
+
     color: var(--color-black);
     margin: 2.5rem 0;
   }
 
   .nav-links.active {
+    top: 0;
     right: 0;
-    backdrop-filter: blur(5px);
+    z-index: -1;
+    backdrop-filter: blur(10px);
   }
+ 
 
   .hamburger {
     display: flex;
