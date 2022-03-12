@@ -1069,11 +1069,85 @@ width:0%;
   transform: scale(1.05) rotate(1deg);
 }
 
+/* sponsors */
 
+.sponsors section
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #fff ;
+	
+}
 
+.sponsors-container
+{
+	height: 100%;
+	padding: 15px;
+	margin: 100px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	gap: 5px;
 
+}
+.sponsors-box
+{
+	margin: 15px;
+	position: relative;
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1.5px solid #111;
+	color: #111;
+}
 
+.sponsors-box:before
+{
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: -2px;
+	width: calc(100% + 4px);
+	height: calc(100% - 12px);
+	background: #f7f3df;
+	transition: 0.3s ease-in-out;
+	transform: scaleY(1);
+	transition-delay: 0.5s;
+}
 
+.sponsors-box:hover:before
+{
+	transform: scaleY(0);
+}
+
+.sponsors-box:after
+{
+	content: '';
+	position: absolute;
+	left: 6px;
+	top: -2px;
+	height: calc(100% + 4px);
+	width: calc(100% - 12px);
+	background: #f7f3df;
+	transition: 0.5s ease-in-out;
+	transform: scaleX(1);
+}
+
+.sponsors-box:hover:after
+{
+	transform: scaleX(0);
+}
+
+.sponsors-box span
+{
+	position: relative;
+	z-index: 3;
+} 
 
 /* footer css */
 @media (max-height:800px) {
@@ -1089,9 +1163,9 @@ width:0%;
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 16px sans-serif;
-  padding: 50px 50px 50px 50px;
-  margin-top: 80px;
+  font: bold 16px ;
+  padding: 40px 40px 40px 40px;
+  margin: 0 auto;
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
@@ -1107,7 +1181,7 @@ width:0%;
 
 .footer-distributed h3 {
   color: var(--color-white);
-  font: normal 36px 'Cookie', cursive;
+  font: normal 36px "Oswald",sans-serif;
   margin: 0;
 }
 
@@ -1135,9 +1209,9 @@ width:0%;
 
 .footer-distributed .footer-company-name {
   color: #8f9296;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
-  margin: 0;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -1161,7 +1235,7 @@ width:0%;
 }
 
 .footer-distributed .footer-center i.fa-envelope {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 38px;
 }
 
@@ -1175,14 +1249,13 @@ width:0%;
 .footer-distributed .footer-center p span {
   display: block;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
 }
 
 .footer-distributed .footer-center p a {
-  color: #e0ac1c;
+  color: #fff;
   text-decoration: none;
-  ;
 }
 
 /* Footer Right */
@@ -1194,16 +1267,16 @@ width:0%;
 .footer-distributed .footer-company-about {
   line-height: 20px;
   color: #92999f;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: normal;
   margin: 0;
 }
 
 .footer-distributed .footer-company-about span {
-  display: block;
+  display:block;
   color: var(--color-white);
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: normal;
   margin-bottom: 20px;
 }
 
