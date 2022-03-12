@@ -64,7 +64,6 @@ const countdown = () => {
   const hour = minute * 60;
   const day = hour * 24;
 
-<<<<<<< Updated upstream
   const textDay = Math.floor(gap / day);
   const textHour = Math.floor((gap % day) / hour);
   const textMinute = Math.floor((gap % hour) / minute);
@@ -80,21 +79,6 @@ setInterval(countdown, 1000);
 const timeline = gsap.timeline({defaults:{duration:0.5}})
 timeline
   .to(".nav-links.active", {top: 0,right:0});
-=======
-    const second = 1000;
-    const minute = second*60;
-    const hour = minute*60;
-    const day = hour*24;
-    
-    const textDay = Math.floor(gap/day);
-    const textHour = Math.floor((gap%day)/hour);
-    const textMinute = Math.floor((gap%hour)/minute);
-    const textSecond = Math.floor((gap%minute)/second);
-    document.querySelector(".days").innerText = textDay;
-    document.querySelector(".hours").innerText = textHour;
-    document.querySelector(".minutes").innerText = textMinute;
-    document.querySelector(".seconds").innerText = textSecond;
-  }
   
 setInterval(countdown,1000);
 
@@ -111,4 +95,4 @@ if (month < 10) {
 }
 let year = today.getFullYear()
 dateToday.textContent = day + '/' + month + '/' + year
->>>>>>> Stashed changes
+
