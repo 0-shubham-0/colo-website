@@ -419,7 +419,23 @@ width:0%;
   background-clip: var(--horizontal-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: xx-large;
+  font-size: 50px;
+  margin-bottom: 28px;
+}
+.cal-loc{
+  display: flex;
+  color: white;
+}
+.cal-loc>.cal{
+  font-size: 16px;
+  padding-left: 3px;
+}
+.cal-loc>img , .cal-loc>.loc>img{
+  width: 16px;
+}
+.cal-loc>.loc{
+  margin-left: 25px;
+  font-size: 16px;
 }
 .btn {
   line-height: 50px;
@@ -543,14 +559,40 @@ width:0%;
 
 /* || Start of about section CSS */
 .about>.content-wrap{
+  position: relative;
   gap: 10em;
 }
 .about-content{
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.bg-text{
+  position: absolute;
+  font-weight: 700;
+  font-size: 200px;
+  top: -110px;
+  left: -30px;
+  font-family: "Poppins", sans-serif;
+  opacity: .4;
+  font-style: normal;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b6b6b6;
+}
+.about-content>.subtitle{
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #b6b6b6;
+}
+.about-content>.title{
+  font-size: 50px;
+  position: relative;
+  
 }
 .left-to-right-underline{
-  padding: 1em 0 2em 0;
+  padding: 22px 0 90px 0;
   position: relative;
 }
 .left-to-right-underline::after{
@@ -595,12 +637,22 @@ width:0%;
   z-index: 2;
   box-shadow: rgb(0, 0, 0) 0px 5px 15px;
 }
+<<<<<<< Updated upstream
+=======
+.time{
+  position: relative;
+}
+
+>>>>>>> Stashed changes
 @media screen and (max-width: 1100px){
   .about>.content-wrap{
     flex-direction: column;
   }
   .about-content{
     padding-top: 5em;
+  }
+  .bg-text{
+    top: -30px;
   }
   .about-img{
     display: flex;
