@@ -361,11 +361,11 @@ width:0%;
 .cal-loc{
   display: flex;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
 .cal-loc>.cal{
   font-size: 16px;
-  padding-left: 3px;
+  padding-left: 0.25rem;
   letter-spacing: 1px;
 }
 .cal-loc>img , .cal-loc>.loc>img{
@@ -373,7 +373,7 @@ width:0%;
   height: 20px;
 }
 .cal-loc>.loc{
-  margin-left: 25px;
+  margin-left: 3rem;
   font-size: 16px;
   letter-spacing: 1px;
 }
@@ -442,7 +442,7 @@ width:0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 50px;
-  margin-bottom: 28px;
+  margin-bottom: 2rem;
 }
 .btn {
   line-height: 50px;
@@ -557,7 +557,7 @@ width:0%;
     font-size: smaller;
   }
   .cal-loc{
-    margin-bottom: 25px;
+    margin-bottom: 1.5re;
   }
 }
 @media only screen and (max-width:830px) {
@@ -597,8 +597,8 @@ width:0%;
   -webkit-text-stroke-color: #b6b6b6;
 }
 .about-content>.bg-text{
-  top: -110px;
-  left: -30px;
+  top: -7rem;
+  left: -1.75rem;
 }
 .about-content>.subtitle{
   font-size: 13px;
@@ -611,7 +611,7 @@ width:0%;
   position: relative;
 }
 .left-to-right-underline{
-  padding: 22px 0 90px 0;
+  padding: 1.25rem 0 5rem 0;
   position: relative;
 }
 .left-to-right-underline::after{
@@ -668,7 +668,10 @@ width:0%;
     padding-top: 5em;
   }
   .about-content>.bg-text{
-    top: -30px;
+    top: -1.75rem;
+  }
+  .left-to-right-underline{
+    padding: 1.5rem 0 5rem 0;
   }
   .about-img{
     display: flex;
@@ -688,6 +691,9 @@ width:0%;
   }
   .about-content>.title{
     font-size: 45px;
+  }
+  .left-to-right-underline{
+    padding: 1.75rem 0 5rem 0;
   }
 }
 
