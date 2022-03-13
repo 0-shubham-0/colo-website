@@ -8,41 +8,45 @@ const hamburgers = document.querySelectorAll(".hamburger>span");
 const navlinks = document.querySelector(".nav-links");
 var vh = window.innerHeight / 8;
 const navLink = document.querySelectorAll(".nav-links>a");
+let scrollTop = document.getElementById('timeLeft').progress;
+let elementOffset = document.getElementById('timeLeft').getBoundingClientRect().top;
+let distance = (elementOffset - scrollTop);
 
-window.onscroll = function () {
-  "use strict";
-  console.log("Yooo");
-  if (
-    document.body.scrollTop >= vh ||
-    document.documentElement.scrollTop >= vh
-  ) {
-    myNav.classList.add("nav-colored");
-    myNav.classList.remove("nav-transparent");
-    document.getElementById("logo").src = "./assets/img/logo.png";
 
-    for (var i = 0; i < 5; i++) {
-      navTexts[i].classList.remove("nav-txt-white");
-      navTexts[i].classList.add("nav-txt-black");
+// window.onscroll = function () {
+//   "use strict";
+//   console.log("Yooo");
+//   if (
+//     document.body.scrollTop >= vh ||
+//     document.documentElement.scrollTop >= vh
+//   ) {
+//     myNav.classList.add("nav-colored");
+//     myNav.classList.remove("nav-transparent");
+//     document.getElementById("logo").src = "./assets/img/logo.png";
 
-      // navTexts[i].classList.add("gradient-text");
-    }
-    hamburgers.forEach((hamburger) => {
-      hamburger.style.backgroundColor = "var(--color-black)";
-    });
-  } else {
-    myNav.classList.add("nav-transparent");
-    myNav.classList.remove("nav-colored");
-    document.getElementById("logo").src = "./assets/img/colologo.png";
-    for (var i = 0; i < 5; i++) {
-      navTexts[i].classList.remove("nav-txt-black");
-      navTexts[i].classList.add("nav-txt-white");
-      // navTexts[i].classList.remove("gradient-text");
-    }
-    hamburgers.forEach((hamburger) => {
-      hamburger.style.backgroundColor = "var(--color-white)";
-    });
-  }
-};
+//     for (var i = 0; i < 5; i++) {
+//       navTexts[i].classList.remove("nav-txt-white");
+//       navTexts[i].classList.add("nav-txt-black");
+
+//       // navTexts[i].classList.add("gradient-text");
+//     }
+//     hamburgers.forEach((hamburger) => {
+//       hamburger.style.backgroundColor = "var(--color-black)";
+//     });
+//   } else {
+//     myNav.classList.add("nav-transparent");
+//     myNav.classList.remove("nav-colored");
+//     document.getElementById("logo").src = "./assets/img/colologo.png";
+//     for (var i = 0; i < 5; i++) {
+//       navTexts[i].classList.remove("nav-txt-black");
+//       navTexts[i].classList.add("nav-txt-white");
+//       // navTexts[i].classList.remove("gradient-text");
+//     }
+//     hamburgers.forEach((hamburger) => {
+//       hamburger.style.backgroundColor = "var(--color-white)";
+//     });
+//   }
+// };
 
 hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
