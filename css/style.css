@@ -104,6 +104,7 @@ html {
   text-transform: uppercase;
   font-size: 12rem;
 }
+
 @media only screen and (max-width: 720px) {
   .bgText {
     font-size: 7rem;
@@ -117,7 +118,8 @@ nav {
   font-size: 20px;
   box-shadow: 2rem var(--color-black);
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  height: 80px;
   z-index: 99;
 }
 .nav-colored {
