@@ -20,7 +20,7 @@ body {
   font-family: "Oswald",sans-serif;
   font-weight: 400;
   color: var(--white-text);
-  background-color: rgb(247, 243, 223);
+  background-color: rgb(240, 240, 240);
   overflow-x: hidden;
 }
 
@@ -1152,22 +1152,42 @@ width:0%;
 }
 
 /* sponsors */
+@media screen and (max-width: 750px){
+  .spons-box  {
+    flex: 0 1 100px;
+  }
+  .spons-responsive{
+    width: 100%;
+    height: auto;
+  }
+}
 
-.sponsors section
+.spons-text
+{
+  align-items: flex-start;
+  margin: 5px auto;
+}
+
+.spons-text h1
+{
+  text-align: center;
+  margin: 5px auto;
+  padding: auto;
+}
+.spons section
 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	background: #fff ;
-	
 }
 
-.sponsors-container
+.spons-container
 {
 	height: 100%;
 	padding: 15px;
-	margin: 100px auto;
+	margin: 40px auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -1178,7 +1198,7 @@ width:0%;
 	gap: 5px;
 
 }
-.sponsors-box
+.spons-box
 {
 	margin: 15px;
 	position: relative;
@@ -1188,7 +1208,7 @@ width:0%;
 	color: #111;
 }
 
-.sponsors-box:before
+.spons-box:before
 {
 	content: '';
 	position: absolute;
@@ -1196,18 +1216,18 @@ width:0%;
 	left: -2px;
 	width: calc(100% + 4px);
 	height: calc(100% - 12px);
-	background: #f7f3df;
+	background: #fff;
 	transition: 0.3s ease-in-out;
 	transform: scaleY(1);
 	transition-delay: 0.5s;
 }
 
-.sponsors-box:hover:before
+.spons-box:hover:before
 {
 	transform: scaleY(0);
 }
 
-.sponsors-box:after
+.spons-box:after
 {
 	content: '';
 	position: absolute;
@@ -1215,22 +1235,55 @@ width:0%;
 	top: -2px;
 	height: calc(100% + 4px);
 	width: calc(100% - 12px);
-	background: #f7f3df;
+	background: #fff;
 	transition: 0.5s ease-in-out;
 	transform: scaleX(1);
 }
 
-.sponsors-box:hover:after
+.spons-box:hover:after
 {
 	transform: scaleX(0);
 }
 
-.sponsors-box span
+.spons-box span
 {
 	position: relative;
 	z-index: 3;
 } 
 
+/* Map */
+.map{
+  padding: 0 10em 2em 10em;
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+  background-image: linear-gradient( #f0f0f0, #ffedb1)
+}
+.map-content{
+  padding-top: 2em;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+.map-content-down{
+  padding-top: 6em;
+  display: flex;
+  gap: 2em;
+}
+@media (max-width:800px){
+  .map{
+    display: none;
+  }
+}
+@media (max-width:1100px){
+  .map-content p{
+    display: none;
+  }
+  .map-content{
+    justify-content: center;
+  }
+}
 /* footer css */
 @media (max-height:800px) {
   footer {

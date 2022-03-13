@@ -95,4 +95,3 @@ if (month < 10) {
 }
 let year = today.getFullYear()
 dateToday.textContent = day + '/' + month + '/' + year
-
