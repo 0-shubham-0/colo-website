@@ -20,7 +20,7 @@ body {
   font-family: "Oswald",sans-serif;
   font-weight: 400;
   color: var(--white-text);
-  background-color: rgb(247, 243, 223);
+  background-color: rgb(240, 240, 240);
   overflow-x: hidden;
 }
 
@@ -1071,7 +1071,7 @@ width:0%;
 
 /* sponsors */
 
-.sponsors section
+.spons section
 {
 	display: flex;
 	justify-content: center;
@@ -1081,7 +1081,7 @@ width:0%;
 	
 }
 
-.sponsors-container
+.spons-container
 {
 	height: 100%;
 	padding: 15px;
@@ -1096,7 +1096,7 @@ width:0%;
 	gap: 5px;
 
 }
-.sponsors-box
+.spons-box
 {
 	margin: 15px;
 	position: relative;
@@ -1106,7 +1106,7 @@ width:0%;
 	color: #111;
 }
 
-.sponsors-box:before
+.spons-box:before
 {
 	content: '';
 	position: absolute;
@@ -1120,12 +1120,12 @@ width:0%;
 	transition-delay: 0.5s;
 }
 
-.sponsors-box:hover:before
+.spons-box:hover:before
 {
 	transform: scaleY(0);
 }
 
-.sponsors-box:after
+.spons-box:after
 {
 	content: '';
 	position: absolute;
@@ -1138,12 +1138,12 @@ width:0%;
 	transform: scaleX(1);
 }
 
-.sponsors-box:hover:after
+.spons-box:hover:after
 {
 	transform: scaleX(0);
 }
 
-.sponsors-box span
+.spons-box span
 {
 	position: relative;
 	z-index: 3;
