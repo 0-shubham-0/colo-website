@@ -358,6 +358,28 @@ width:0%;
   display: flex;
   align-items: center;
 }
+.cal-loc{
+  display: flex;
+  color: white;
+  margin-bottom: 40px;
+}
+.cal-loc>.cal{
+  font-size: 16px;
+  padding-left: 3px;
+  letter-spacing: 1px;
+}
+.cal-loc>img , .cal-loc>.loc>img{
+  width: 16px;
+  height: 20px;
+}
+.cal-loc>.loc{
+  margin-left: 25px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.content-container>.box-3>.btn-three{
+  width: 150px;
+}
 .line {
   position: absolute;
   height: 1px;
@@ -419,7 +441,8 @@ width:0%;
   background-clip: var(--horizontal-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: xx-large;
+  font-size: 50px;
+  margin-bottom: 28px;
 }
 .btn {
   line-height: 50px;
@@ -433,23 +456,6 @@ width:0%;
   transition: all 0.5s;
   position: relative;
 }
-.btn-three::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  transform: scale(1.2, 1.2);
-}
-.btn-three:hover::before {
-  opacity: 1;
-  transform: scale(1, 1);
-}
 .btn-three::after {
   content: "";
   position: absolute;
@@ -458,17 +464,42 @@ width:0%;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
   transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.2, 1.2);
 }
 .btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+}
+.btn-three:hover::before {
   opacity: 0;
   transform: scale(0.5, 0.5);
+}
+@media screen and (max-width:768px){
+  .first-section h1{
+    font-size: 35px;
+  }
+  .cal-loc>.cal, .cal-loc>.loc{
+    font-size: 14px;
+  }
 }
 @media only screen and(max-width:768px) {
   .first-section .content-wrap {
     padding: 0 1em;
-  }
+  } 
   .btn-three::before {
     transform: scale(1, 1);
   }
@@ -525,6 +556,9 @@ width:0%;
   .coming-soon__item{
     font-size: smaller;
   }
+  .cal-loc{
+    margin-bottom: 25px;
+  }
 }
 @media only screen and (max-width:830px) {
   .coming-soon__item-wrap .coming-soon__item{
@@ -543,14 +577,41 @@ width:0%;
 
 /* || Start of about section CSS */
 .about>.content-wrap{
+  position: relative;
   gap: 10em;
 }
 .about-content{
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.bg-text{
+  position: absolute;
+  font-weight: 700;
+  font-size: 200px;
+  font-family: "Poppins", sans-serif;
+  opacity: .4;
+  font-style: normal;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #b6b6b6;
+}
+.about-content>.bg-text{
+  top: -110px;
+  left: -30px;
+}
+.about-content>.subtitle{
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #b6b6b6;
+}
+.about-content>.title{
+  font-size: 50px;
+  position: relative;
 }
 .left-to-right-underline{
-  padding: 1em 0 2em 0;
+  padding: 22px 0 90px 0;
   position: relative;
 }
 .left-to-right-underline::after{
@@ -595,12 +656,19 @@ width:0%;
   z-index: 2;
   box-shadow: rgb(0, 0, 0) 0px 5px 15px;
 }
+.time{
+  position: relative;
+}
+
 @media screen and (max-width: 1100px){
   .about>.content-wrap{
     flex-direction: column;
   }
   .about-content{
     padding-top: 5em;
+  }
+  .about-content>.bg-text{
+    top: -30px;
   }
   .about-img{
     display: flex;
@@ -618,19 +686,30 @@ width:0%;
     width: 80%;
     height: 80%;
   }
+  .about-content>.title{
+    font-size: 45px;
+  }
 }
 
 
 .events{
   padding-top: 4rem;
+  padding-bottom: 4rem;
   background: linear-gradient( #f0f0f0, #f6e8c0, #f0f0f0);
   /* background-color: rgba(246, 4, 124, 0.09);
-  position: relative;
   color: var(--black-bg); */
-
+  position: relative;
 }
 .events>.content-wrap{
   flex-direction: column;
+}
+.events>.content-wrap>.bg-text{
+  position: absolute;
+  opacity: .3;
+  line-height: 150px;
+  right: 0;
+  writing-mode: vertical-rl;
+  -webkit-text-stroke-color: #ff4070;
 }
 .events header{
   text-align: center;
@@ -676,6 +755,9 @@ width:0%;
     flex-direction: column;
     gap: 5em;
     align-items: center;
+  }
+  .events>.content-wrap>.bg-text{
+    top: 33%;
   }
   .events .content-wrap{
     min-height: 1000px;

@@ -79,7 +79,19 @@ setInterval(countdown, 1000);
 const timeline = gsap.timeline({defaults:{duration:0.5}})
 timeline
   .to(".nav-links.active", {top: 0,right:0});
-
-
-
   
+setInterval(countdown,1000);
+
+// date - DD/MM/YYYY format
+let dateToday = document.getElementById("date")
+let today = new Date()
+let day = today.getDate()
+if (day < 10) {
+    day = '0' + day
+}
+let month = today.getMonth() + 1
+if (month < 10) {
+    month = '0' + month
+}
+let year = today.getFullYear()
+dateToday.textContent = day + '/' + month + '/' + year
