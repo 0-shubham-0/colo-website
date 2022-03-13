@@ -80,7 +80,7 @@
           align-items: center;
   -webkit-transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
   transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
-  cursor: pointer;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 
 .container .post .body_post .post_content {
@@ -173,7 +173,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: pointer;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 
 .container .post .body_post .post_content .container_infos .container_tags .tags ul li:first-child {

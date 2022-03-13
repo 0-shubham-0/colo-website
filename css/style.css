@@ -105,16 +105,19 @@ nav {
   column-gap: 10px;
   align-items: center;
   text-decoration: none;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .nav-links > a {
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
   transition: ease-in-out 250ms;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .nav-text {
   text-decoration: none;
   padding: 0 2rem;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .nav-txt-black{
   color: var(--color-black);
@@ -342,7 +345,7 @@ width:0%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    cursor: url("../assets/img/hand-cursor.png"),pointer;
   }
 }
 /* || End of Navigation Bar CSS */
@@ -454,12 +457,13 @@ width:0%;
   height: 50px;
   text-align: center;
   width: 250px;
-  cursor: pointer;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .btn-three {
   color: var(--color-white);
   transition: all 0.5s;
   position: relative;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .btn-three::after {
   content: "";
@@ -1049,6 +1053,7 @@ width:0%;
   backface-visibility: hidden;
   text-decoration: none;
   overflow: hidden;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 
 .speaker-content .profile::before,
@@ -1212,7 +1217,6 @@ width:0%;
 	flex-wrap: wrap;
 	align-content: center;
 	gap: 5px;
-
 }
 .spons-box
 {
@@ -1265,6 +1269,7 @@ width:0%;
 {
 	position: relative;
 	z-index: 3;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 } 
 
 /* Map */
@@ -1442,7 +1447,7 @@ width:0%;
   display: inline-block;
   width: 35px;
   height: 35px;
-  cursor: pointer;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
   background-color: #33383b;
   border-radius: 2px;
   font-size: 20px;
