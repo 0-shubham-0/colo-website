@@ -135,3 +135,17 @@ ul{
   font-size: 12px;
   line-height: 1.5;
 }
+.timeline>.bgText{
+  top: 10%;
+  left: 5%;
+}
+.timeline>.bgText{
+  display: flex;
+  flex-wrap: wrap;
+}
+.timeline>.bgText>span{
+  display: flex;
+}
+.timeline>.bgText>span>div{
+  font-size: 14rem;
+}

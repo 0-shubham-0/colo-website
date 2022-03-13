@@ -52,8 +52,8 @@
     </div>
   </nav>
     <!-- Content -->
-    <section class="first-section" data-scroll-section>
-      <div class="content-wrap">
+    <section class="first-section" data-scroll-section  id="first" >
+      <div class="content-wrap" data-scroll="" data-scroll-speed="6" data-scroll-sticky data-scroll-target="#first">
         <div>
           <h1 class="gradient-text">Lorem ipsum dolor sit amet,<span> consectetur adipisicing elit.</span></h1>
           <div>
@@ -68,7 +68,7 @@
             <span></span>
             <span></span>
           </span>
-          <a href="temp/test.html">
+          <a href="#">
             <div class="box-3">
               <div class="btn btn-three">
                 <span>Read More</span>
@@ -79,7 +79,7 @@
       </div>
     </section>
 
-    <section class="time" data-scroll-section>
+    <section class="time" data-scroll data-scroll-section data-scroll-call="BlackText">
       <div class="content-wrap">
         <div class="main-info-wrap">
           <header>
@@ -113,7 +113,6 @@
       <div class="content-wrap">
         <div class="about-content">
           <header>
-            <p>About Event</p>
             <h2 class="gradient-text left-to-right-underline">EXPERIENCE A TRUE TECHNICAL EVENT</h2>
           </header>
           <p>
@@ -132,11 +131,12 @@
     </section>
 
     <section class="events" data-scroll-section id="event">
-      <div class="bgText" data-scroll="" data-scroll-delay="0.1" data-scroll-speed="1" data-scroll-sticky data-scroll-target="#event">events</div>
+      <div class="bgText" data-scroll="" data-scroll-delay="0.1" data-scroll-speed="1" data-scroll-sticky data-scroll-target="#event" data-scroll-offset="0%, 100%" ><div>
+        events
+      </div></div>
       <div class="content-wrap">
         <header>
-          <h5>COMING SOON</h5>
-          <h1 class="gradient-text center-expand-underline">Upcoming Events</h1>
+          <h1 class="gradient-text center-expand-underline">COMING SOON</h1>
         </header>
         <div class="card">
           <div class="container">
@@ -249,7 +249,7 @@
     </section>
 
     <section class="speaker" data-scroll-section>
-      <div class="bgText" data-scroll-direction="horizontal" data-scroll data-scroll-call="">speakers</div>
+      <!-- <div class="bgText" data-scroll-direction="horizontal" data-scroll data-scroll-call="">speakers</div> -->
       <div class="content-wrap">
         <div class="speaker-content">
           <article class="flow">
@@ -322,8 +322,21 @@
       </div>
     </section>
 
-    <section class="timeline" data-scroll-section>
-      <div class="bgText" data-scroll-direction="horizontal" data-scroll data-scroll-call="">timeline</div>
+    <section class="timeline" data-scroll-section id="timeline">
+      <div class="bgText" data-scroll data-scroll-sticky data-scroll-target="#timeline" data-scroll-offset="0%, 0%" >
+        <span>
+          <div data-scroll="" data-scroll-delay="0.2" data-scroll-speed="9" >t</div>
+          <div data-scroll="" data-scroll-delay="0.3" data-scroll-speed="8" >i</div>
+          <div data-scroll="" data-scroll-delay="0.4" data-scroll-speed="7" >m</div>
+          <div data-scroll="" data-scroll-delay="0.5" data-scroll-speed="6" >e</div>
+        </span>
+        <span>
+          <div data-scroll="" data-scroll-delay="0.2" data-scroll-speed="9" >l</div>
+          <div data-scroll="" data-scroll-delay="0.3" data-scroll-speed="8" >i</div>
+          <div data-scroll="" data-scroll-delay="0.4" data-scroll-speed="7" >n</div>
+          <div data-scroll="" data-scroll-delay="0.5" data-scroll-speed="6" >e</div>
+        </span>
+      </div>
       <div class="content-wrap">
         <header>
           <h5>Events</h5>
