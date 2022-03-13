@@ -79,3 +79,7 @@ setInterval(countdown, 1000);
 const timeline = gsap.timeline({defaults:{duration:0.5}})
 timeline
   .to(".nav-links.active", {top: 0,right:0});
+
+
+
+  
