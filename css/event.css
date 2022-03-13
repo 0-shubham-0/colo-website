@@ -24,6 +24,10 @@ ul{
   justify-content: center;
   align-items: center;
 }
+.timeline h1{
+  font-weight: 700;
+  font-size: 2rem;
+}
 .event {
   list-style: none;
   width: 60vw;
