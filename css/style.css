@@ -488,10 +488,18 @@ width:0%;
   opacity: 0;
   transform: scale(0.5, 0.5);
 }
+@media screen and (max-width:768px){
+  .first-section h1{
+    font-size: 35px;
+  }
+  .cal-loc>.cal, .cal-loc>.loc{
+    font-size: 14px;
+  }
+}
 @media only screen and(max-width:768px) {
   .first-section .content-wrap {
     padding: 0 1em;
-  }
+  } 
   .btn-three::before {
     transform: scale(1, 1);
   }
@@ -548,6 +556,9 @@ width:0%;
   .coming-soon__item{
     font-size: smaller;
   }
+  .cal-loc{
+    margin-bottom: 25px;
+  }
 }
 @media only screen and (max-width:830px) {
   .coming-soon__item-wrap .coming-soon__item{
@@ -578,14 +589,16 @@ width:0%;
   position: absolute;
   font-weight: 700;
   font-size: 200px;
-  top: -110px;
-  left: -30px;
   font-family: "Poppins", sans-serif;
   opacity: .4;
   font-style: normal;
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #b6b6b6;
+}
+.about-content>.bg-text{
+  top: -110px;
+  left: -30px;
 }
 .about-content>.subtitle{
   font-size: 13px;
@@ -596,7 +609,6 @@ width:0%;
 .about-content>.title{
   font-size: 50px;
   position: relative;
-  
 }
 .left-to-right-underline{
   padding: 22px 0 90px 0;
@@ -655,7 +667,7 @@ width:0%;
   .about-content{
     padding-top: 5em;
   }
-  .bg-text{
+  .about-content>.bg-text{
     top: -30px;
   }
   .about-img{
@@ -674,19 +686,30 @@ width:0%;
     width: 80%;
     height: 80%;
   }
+  .about-content>.title{
+    font-size: 45px;
+  }
 }
 
 
 .events{
   padding-top: 4rem;
+  padding-bottom: 4rem;
   background: linear-gradient( #f0f0f0, #f6e8c0, #f0f0f0);
   /* background-color: rgba(246, 4, 124, 0.09);
-  position: relative;
   color: var(--black-bg); */
-
+  position: relative;
 }
 .events>.content-wrap{
   flex-direction: column;
+}
+.events>.content-wrap>.bg-text{
+  position: absolute;
+  opacity: .3;
+  line-height: 150px;
+  right: 0;
+  writing-mode: vertical-rl;
+  -webkit-text-stroke-color: #ff4070;
 }
 .events header{
   text-align: center;
@@ -732,6 +755,9 @@ width:0%;
     flex-direction: column;
     gap: 5em;
     align-items: center;
+  }
+  .events>.content-wrap>.bg-text{
+    top: 33%;
   }
   .events .content-wrap{
     min-height: 1000px;
