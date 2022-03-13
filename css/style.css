@@ -1,5 +1,23 @@
+/* ******INDEX******
+1. Import
+2. Initialization
+3. Navigation Bar CSS
+4. First section CSS
+5. Time left CSS
+6. About section CSS
+7. Events card CSS
+8. Speakers CSS (Scss compiled)
+9. Timeline CSS
+10. Footer CSS
+*/
+
+/* **************************************************************** */
+
+/* ||Import|| */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500&display=swap');
 @import "vars_og.css";
+/* ||End Import|| */
+/* ||Initialization */
 * {
   margin: 0;
 }
@@ -10,13 +28,8 @@
   line-height: 2.5rem;
   box-sizing: border-box;
 }
-/* *::selection{
-  color: #bbb;
-  background: #333;
-} */
 body {
   position: relative;
-  /* font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI","Helvetica Neue", Arial, sans-serif; */
   font-family: "Oswald",sans-serif;
   font-weight: 400;
   color: var(--white-text);
@@ -24,7 +37,7 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
@@ -32,9 +45,9 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-bar-light);
-  /* var(--accent); */
+  var(--accent);
   border-radius: 0.5rem;
-}
+} */
 html {
   scroll-behavior: smooth;
 }
@@ -59,7 +72,32 @@ html {
   0%{background-position: left;}
   100%{background-position: right;}
 }
-/* || Navigation Bar CSS */
+.first-section,.about,.time,.events,.speaker,.timeline{
+  position: relative;
+}
+
+
+.bgText{
+  user-select: none;
+  font-family: 'Hanson',sans-serif;
+  color: #213d4e56;
+  -webkit-text-stroke:5px #213d4e24;
+  -webkit-text-fill-color:transparent;
+  letter-spacing: 10px;
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 12rem;
+}
+@media only screen and (max-width: 720px){
+  .bgText{
+    font-size: 7rem;
+  }
+}
+/* ||End Initialization|| */
+
+
+
+/* ||Navigation Bar CSS|| */
 nav {
   font-family:'Hanson',sans-serif;
   font-size: 20px;
@@ -230,9 +268,6 @@ nav {
 .nav-links > a:focus-within::before {
   transition: 0ms;
 }
-.nav-head > p:hover::before,
-.nav-links > a:hover::before {
-}
 .nav-head > p:last-child::before,
 .nav-links > a:last-child::before {
 width:0%;
@@ -340,11 +375,11 @@ width:0%;
     cursor: pointer;
   }
 }
-/* || End of Navigation Bar CSS */
+/* ||End Navigation Bar CSS|| */
 
 
 
-/* || Start of first section CSS */
+/* ||First section CSS|| */
 .first-section {
   background: var(--transparent-overlay), url("../assets/img/hero1.jpg");
   background-repeat: no-repeat;
@@ -473,11 +508,12 @@ width:0%;
     transform: scale(1, 1);
   }
 }
-/* || End of first section CSS */
+/* ||End First section CSS|| */
 
-/* || Start of time left CSS */
+/* ||Time left CSS|| */
 .time>.content-wrap{
   background: linear-gradient(#dfbfa5, #f0f0f0);
+  background-position: center center;
   color: var(--black-bg);
   min-height: 50vh;
 }
@@ -537,13 +573,12 @@ width:0%;
     flex-wrap: wrap;
   }
 }
+/* ||End Time left CSS|| */
 
-
-
-
-/* || Start of about section CSS */
+/* ||About section CSS|| */
 .about>.content-wrap{
   gap: 10em;
+  /* background: linear-gradient( #f0f0f0, #f6e8c0, #f0f0f0); */
 }
 .about-content{
   display: flex;
@@ -595,6 +630,10 @@ width:0%;
   z-index: 2;
   box-shadow: rgb(0, 0, 0) 0px 5px 15px;
 }
+.about>.bgText{
+  top: 10%;
+  left: 10%;
+}
 @media screen and (max-width: 1100px){
   .about>.content-wrap{
     flex-direction: column;
@@ -612,6 +651,10 @@ width:0%;
   .img-2{
     display: none;
   }
+  .about>.bgText{
+    top: 25%;
+    left: 0;
+  }
 }
 @media screen and (max-width: 450px){
   .img-1{
@@ -619,8 +662,9 @@ width:0%;
     height: 80%;
   }
 }
+/* ||End About section CSS|| */
 
-
+/* ||Events card CSS|| */
 .events{
   padding-top: 4rem;
   background: linear-gradient( #f0f0f0, #f6e8c0, #f0f0f0);
@@ -671,6 +715,12 @@ width:0%;
   gap: 2em;
   padding-bottom: 2em;
 }
+.events>.bgText{
+  left: 0;
+  top: 0;
+  transform-origin: center left;
+  transform: rotate(90deg);
+}
 @media screen and (max-width: 1100px){
   .card{
     flex-direction: column;
@@ -682,6 +732,12 @@ width:0%;
   }
   .post{
     width: 80%;
+  }
+  .events>.bgText{
+    left: 0;
+    top: 50%;
+    transform-origin: center left;
+    transform:translateY(-50%) rotate(90deg);
   }
 }
 
@@ -886,7 +942,6 @@ width:0%;
 
 
 /* speakers */
-
 /* Globals */
 @media only screen and (max-width:1100px){
   .speaker-content{
@@ -1069,6 +1124,9 @@ width:0%;
   transform: scale(1.05) rotate(1deg);
 }
 
+/* ||Timeline CSS|| */
+/* Add this in later */
+/* ||End Timeline CSS|| *
 /* sponsors */
 
 .spons section
@@ -1148,7 +1206,38 @@ width:0%;
 	position: relative;
 	z-index: 3;
 } 
-
+.map{
+  padding: 0 10em 2em 10em;
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+  background-image: linear-gradient( #f0f0f0, #ffedb1)
+}
+.map-content{
+  padding-top: 2em;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+.map-content-down{
+  padding-top: 6em;
+  display: flex;
+  gap: 2em;
+}
+@media (max-width:800px){
+  .map{
+    display: none;
+  }
+}
+@media (max-width:1100px){
+  .map-content p{
+    display: none;
+  }
+  .map-content{
+    justify-content: center;
+  }
+}
 /* footer css */
 @media (max-height:800px) {
   footer {

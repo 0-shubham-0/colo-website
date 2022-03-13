@@ -1,3 +1,5 @@
+
+
 //const navBar = document.querySelector
 var myNav = document.getElementById("mynav");
 var navTexts = document.getElementsByClassName("nav-text");
@@ -9,6 +11,7 @@ const navLink = document.querySelectorAll(".nav-links>a");
 
 window.onscroll = function () {
   "use strict";
+  console.log("Yooo");
   if (
     document.body.scrollTop >= vh ||
     document.documentElement.scrollTop >= vh
@@ -75,7 +78,6 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
-
-const timeline = gsap.timeline({defaults:{duration:0.5}})
-timeline
-  .to(".nav-links.active", {top: 0,right:0});
+// const timeline = gsap.timeline({defaults:{duration:0.5}})
+// timeline
+//   .to(".nav-links.active", {top: 0,right:0});

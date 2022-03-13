@@ -2,10 +2,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background: linear-gradient( #f0f0f0, #dfbfa5, #f0f0f0);
+
 }
-/* .event-date{
-  flex: 1;
-} */
 ul{
   padding: 0%;
 }
@@ -15,6 +14,7 @@ ul{
 }
 .event-date {
   flex: 1;
+  z-index: 1;
 }
 .event-body,
 .date,
