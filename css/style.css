@@ -297,9 +297,6 @@ width:0%;
   opacity: 1;
 }
 
-
-
-
 @media screen and (max-width: 1000px) {
   header {
     font-size: 16px;
@@ -327,25 +324,37 @@ width:0%;
     text-align: center;
     transition: all 0.5s;
   }
+  
   .nav-links > a {
 
     color: var(--color-black);
     margin: 2.5rem 0;
   }
-
   .nav-links.active {
     top: 0;
     right: 0;
     z-index: -1;
     backdrop-filter: blur(10px);
   }
- 
-
   .hamburger {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: url("../assets/img/hand-cursor.png"),pointer;
+  }
+  @media screen and (max-width: 450px) {
+    .nav-head>p{
+      padding: 0 0 0 1rem;
+    }
+    nav{
+      width: 100vw;
+    }
+    .nav-links{
+      width: 100vw;
+    }
+    .nav-links.active{
+      right: 4rem;
+    }
   }
 }
 /* || End of Navigation Bar CSS */
@@ -376,14 +385,19 @@ width:0%;
   padding-left: 0.25rem;
   letter-spacing: 1px;
 }
-.cal-loc>img , .cal-loc>.loc>img{
+.cal-loc>img , .cal-loc>a>.loc>img{
   width: 16px;
   height: 20px;
 }
-.cal-loc>.loc{
+.cal-loc>a>.loc{
   margin-left: 3rem;
   font-size: 16px;
   letter-spacing: 1px;
+}
+.cal-loc>a{
+  text-decoration: none;
+  color: white;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .content-container>.box-3>.btn-three{
   width: 150px;
