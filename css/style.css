@@ -385,14 +385,19 @@ width:0%;
   padding-left: 0.25rem;
   letter-spacing: 1px;
 }
-.cal-loc>img , .cal-loc>.loc>img{
+.cal-loc>img , .cal-loc>a>.loc>img{
   width: 16px;
   height: 20px;
 }
-.cal-loc>.loc{
+.cal-loc>a>.loc{
   margin-left: 3rem;
   font-size: 16px;
   letter-spacing: 1px;
+}
+.cal-loc>a{
+  text-decoration: none;
+  color: white;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .content-container>.box-3>.btn-three{
   width: 150px;
