@@ -53,15 +53,11 @@ hamburger.addEventListener('click', ()=> {
     whiteLayer.style.right ="-100vw";
     blackLayer.style.right ="-100vw";
     hamburger.classList.remove('active');
-      // navlinks.classList.remove('white-layer');
       // $('.nav-links .black-layer').css('transition-delay', '0.4s');
       // $('.nav-links .white-layer').css('transition-delay', '0.8s');
   } else {
-    console.log("Before")
-    setTimeout(() => { whiteLayer.style.right ="0";},1000);
-    console.log("After")
-    // setTimeout(navlinks.classList.add('white-layer'),400);
-    blackLayer.style.right ="0";
+    setTimeout(() => { blackLayer.style.right ="0";},500);
+    whiteLayer.style.right ="0";
     navlinks.classList.add('active');
     hamburger.classList.add('active');
       
