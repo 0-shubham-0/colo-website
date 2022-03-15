@@ -2,10 +2,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background: linear-gradient( #f0f0f0, #dfbfa5, #f0f0f0);
+
 }
-/* .event-date{
-  flex: 1;
-} */
 ul{
   padding: 0%;
 }
@@ -15,6 +14,7 @@ ul{
 }
 .event-date {
   flex: 1;
+  z-index: 1;
 }
 .event-body,
 .date,
@@ -138,4 +138,18 @@ ul{
   padding: 0 20px;
   font-size: 12px;
   line-height: 1.5;
+}
+.timeline>.bgText{
+  top: 10%;
+  left: 5%;
+}
+.timeline>.bgText{
+  display: flex;
+  flex-wrap: wrap;
+}
+.timeline>.bgText>span{
+  display: flex;
+}
+.timeline>.bgText>span>div{
+  font-size: 14rem;
 }

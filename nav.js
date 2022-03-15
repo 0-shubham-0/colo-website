@@ -1,47 +1,17 @@
+
+
 //const navBar = document.querySelector
 var myNav = document.getElementById("mynav");
 var navTexts = document.getElementsByClassName("nav-text");
 const hamburger = document.querySelector(".hamburger");
 const hamburgers = document.querySelectorAll(".hamburger>span");
+let whiteLayer = document.querySelector(".white-layer");
+let blackLayer = document.querySelector(".black-layer");
 const navlinks = document.querySelector(".nav-links");
 var vh = window.innerHeight / 8;
 const navLink = document.querySelectorAll(".nav-links>a");
 
-window.onscroll = function () {
-  "use strict";
-  if (
-    document.body.scrollTop >= vh ||
-    document.documentElement.scrollTop >= vh
-  ) {
-    myNav.classList.add("nav-colored");
-    myNav.classList.remove("nav-transparent");
-    document.getElementById("logo").src = "./assets/img/logo.png";
-
-    for (var i = 0; i < 5; i++) {
-      navTexts[i].classList.remove("nav-txt-white");
-      navTexts[i].classList.add("nav-txt-black");
-
-      // navTexts[i].classList.add("gradient-text");
-    }
-    hamburgers.forEach((hamburger) => {
-      hamburger.style.backgroundColor = "var(--color-black)";
-    });
-  } else {
-    myNav.classList.add("nav-transparent");
-    myNav.classList.remove("nav-colored");
-    document.getElementById("logo").src = "./assets/img/colologo.png";
-    for (var i = 0; i < 5; i++) {
-      navTexts[i].classList.remove("nav-txt-black");
-      navTexts[i].classList.add("nav-txt-white");
-      // navTexts[i].classList.remove("gradient-text");
-    }
-    hamburgers.forEach((hamburger) => {
-      hamburger.style.backgroundColor = "var(--color-white)";
-    });
-  }
-};
-
-hamburger.addEventListener("click", mobileMenu);
+// hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
   hamburger.classList.toggle("active");
   navlinks.classList.toggle("active");
@@ -76,22 +46,23 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-const timeline = gsap.timeline({defaults:{duration:0.5}})
-timeline
-  .to(".nav-links.active", {top: 0,right:0});
-  
-setInterval(countdown,1000);
+hamburger.addEventListener('click', ()=> {
+  if (hamburger.classList.contains("active")) {
+    navlinks.classList.remove('active');
+    whiteLayer.style.right ="-100vw";
+    blackLayer.style.right ="-100vw";
+    hamburger.classList.remove('active');
+      // $('.nav-links .black-layer').css('transition-delay', '0.4s');
+      // $('.nav-links .white-layer').css('transition-delay', '0.8s');
+  } else {
+    setTimeout(() => { blackLayer.style.right ="0";},500);
+    whiteLayer.style.right ="0";
+    navlinks.classList.add('active');
+    hamburger.classList.add('active');
+      
+    // navlinks.classList.add('black-layer');
+      // $('.nav-links .black-layer').css('transition-delay', '0.4s');
+      // $('.nav-links .white-layer').css('transition-delay', '0s');
+  }
+});
 
-// date - DD/MM/YYYY format
-let dateToday = document.getElementById("date")
-let today = new Date()
-let day = today.getDate()
-if (day < 10) {
-    day = '0' + day
-}
-let month = today.getMonth() + 1
-if (month < 10) {
-    month = '0' + month
-}
-let year = today.getFullYear()
-dateToday.textContent = day + '/' + month + '/' + year
