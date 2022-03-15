@@ -46,7 +46,6 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-
 hamburger.addEventListener('click', ()=> {
   if (hamburger.classList.contains("active")) {
     navlinks.classList.remove('active');
@@ -66,3 +65,4 @@ hamburger.addEventListener('click', ()=> {
       // $('.nav-links .white-layer').css('transition-delay', '0s');
   }
 });
+
