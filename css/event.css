@@ -44,7 +44,7 @@ ul{
   padding: 1em 0;
   min-width: 130px;
   cursor: pointer;
-  background-color: blanchedalmond;
+  background-color: #8b24d43a;
   transition: background-color 0.3s ease-in;
 }
 .date:hover {
@@ -72,7 +72,7 @@ ul{
   content: "";
   width: 100%;
   height: 1px;
-  background-color: rgb(212, 93, 93);
+  background-color: #8c24d4;
 }
 .eventList.hide {
   display: none;
@@ -84,7 +84,7 @@ ul{
 
 .date.active {
   position: relative;
-  background-color: rgb(212, 93, 93);
+  background-color: #8b24d4ce;
 }
 .date.active::after {
   display: block;
@@ -95,7 +95,7 @@ ul{
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 8px solid rgb(212, 93, 93);
+  border-top: 8px solid #8c24d4
 }
 
 .accordion > .accordion-toggle {
