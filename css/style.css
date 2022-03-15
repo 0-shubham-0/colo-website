@@ -105,7 +105,16 @@ html {
   text-transform: uppercase;
   font-size: 12rem;
 }
-
+.content-wrap::before,
+.content-wrap::after,
+.nav-main::before,
+.nav-main::after,
+.speaker-content .auto-grid::before,
+.speaker-content .auto-grid::after,
+.accordion>label::before,
+.accordion>label::after {
+  display: none;
+}
 @media only screen and (max-width: 720px) {
   .bgText {
     font-size: 7rem;
@@ -146,7 +155,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding:0 2rem; */
+  position: relative;
 }
 
 .nav-head {
@@ -320,17 +329,14 @@ nav {
 
 .nav-links a:nth-child(1):hover ~ .dot {
   width: 6ch;
-  /* -webkit-transform: translateX(-305px); */
-  transform: translateX(-51.5rem);
+  transform: translateX(-745px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
-
 .nav-links a:nth-child(2):hover ~ .dot {
   width: 8ch;
-  /* -webkit-transform: translateX(-150px); */
-  transform: translateX(-38.5rem);
+  transform: translateX(-535px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -338,12 +344,12 @@ nav {
 
 .nav-links a:nth-child(3):hover ~ .dot {
   width: 7ch;
-  /* -webkit-transform: translateX(10px); */
-  transform: translateX(-26.5rem);
+  transform: translateX(-345px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
+
 
 @media screen and (max-width: 1000px) {
   header {
@@ -1022,6 +1028,7 @@ nav {
   grid-gap: var(--auto-grid-gap, 0);
   padding: 0;
 }
+
 .speaker-content .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
