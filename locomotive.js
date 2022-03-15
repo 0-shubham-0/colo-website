@@ -1,12 +1,19 @@
 const scroller = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
+  // el: document.querySelector("[data-scroll-container]"),
   smooth: true,
-  // smartphone: {
-  //   smooth: true,
-  // },
-  // tablet: {
-  //   smooth: true,
-  // },
+  smartphone: {
+    smooth: true,
+    lerp:0.01,
+    // touchMultiplier:100,
+    // getSpeed: true,
+    resetNativeScroll:true,
+  },
+  tablet: {
+    smooth: true,
+    lerp: 0.01,
+    // touchMultiplier:100,
+    // getSpeed: true,
+  },
 });
 scroller.on('scroll', ({ limit, scroll }) => {
   const progress = scroll.y / limit.y * 100 

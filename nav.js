@@ -49,20 +49,14 @@ setInterval(countdown, 1000);
 hamburger.addEventListener('click', ()=> {
   if (hamburger.classList.contains("active")) {
     navlinks.classList.remove('active');
-    whiteLayer.style.right ="-100vw";
-    blackLayer.style.right ="-100vw";
+    setTimeout(() => {blackLayer.style.right ="-100vw";},300);
+    setTimeout(() => {whiteLayer.style.right ="-100vw";},600);
     hamburger.classList.remove('active');
-      // $('.nav-links .black-layer').css('transition-delay', '0.4s');
-      // $('.nav-links .white-layer').css('transition-delay', '0.8s');
   } else {
-    setTimeout(() => { blackLayer.style.right ="0";},500);
-    whiteLayer.style.right ="0";
-    navlinks.classList.add('active');
+    setTimeout(() => { blackLayer.style.right ="0";},300);
+    setTimeout(() => {whiteLayer.style.right ="0";},100);
+    setTimeout(() => {navlinks.classList.add('active');},600);
     hamburger.classList.add('active');
-      
-    // navlinks.classList.add('black-layer');
-      // $('.nav-links .black-layer').css('transition-delay', '0.4s');
-      // $('.nav-links .white-layer').css('transition-delay', '0s');
   }
 });
 
