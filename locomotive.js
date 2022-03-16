@@ -1,18 +1,19 @@
 const scroller = new LocomotiveScroll({
-  // el: document.querySelector("[data-scroll-container]"),
+  el: document.querySelector("[data-scroll-container]"),
   smooth: true,
+  lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
+  multiplier: 1.4, // Effect Multiplier
+  reloadOnContextChange: true,
+  smoothMobile: 0,
   smartphone: {
-    smooth: true,
-    lerp:0.01,
-    // touchMultiplier:100,
-    // getSpeed: true,
-    resetNativeScroll:true,
+    touchMultiplier: 3.5,
+      smooth: true,
+      breakpoint: 767
   },
   tablet: {
-    smooth: true,
-    lerp: 0.01,
-    // touchMultiplier:100,
-    // getSpeed: true,
+    touchMultiplier: 3.5,
+      smooth: true,
+      breakpoint: 1024
   },
 });
 scroller.on('scroll', ({ limit, scroll }) => {
