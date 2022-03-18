@@ -144,8 +144,8 @@ ul{
   line-height: 1.5;
 }
 .timeline>.bgText{
-  top: 10%;
-  left: 5%;
+  top: 35vh;
+  right: 0;
 }
 .timeline>.bgText{
   display: flex;
@@ -155,5 +155,5 @@ ul{
   display: flex;
 }
 .timeline>.bgText>span>div{
-  font-size: 14rem;
+  font-size: 9rem;
 }
