@@ -17,7 +17,7 @@ const scroller = new LocomotiveScroll({
 });
 scroller.on('scroll', ({ limit, scroll }) => {
   const progress = scroll.y / limit.y * 100 
-  // console.log(progress)
+
   if(progress<=1){
     myNav.classList.add("nav-transparent");
     myNav.classList.remove("nav-colored");
