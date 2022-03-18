@@ -46,7 +46,7 @@ ul{
   flex: 1;
   padding: 1em 0;
   min-width: 130px;
-  cursor: pointer;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
   background-color: #8b24d43a;
   transition: background-color 0.3s ease-in;
 }

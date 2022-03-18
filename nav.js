@@ -1,5 +1,3 @@
-
-
 //const navBar = document.querySelector
 var myNav = document.getElementById("mynav");
 var navTexts = document.getElementsByClassName("nav-text");
@@ -11,7 +9,6 @@ const navlinks = document.querySelector(".nav-links");
 var vh = window.innerHeight / 8;
 const navLink = document.querySelectorAll(".nav-links>a");
 
-// hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
   hamburger.classList.toggle("active");
   navlinks.classList.toggle("active");
@@ -46,23 +43,26 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-hamburger.addEventListener('click', ()=> {
+hamburger.addEventListener("click", () => {
   if (hamburger.classList.contains("active")) {
-    navlinks.classList.remove('active');
-    whiteLayer.style.right ="-100vw";
-    blackLayer.style.right ="-100vw";
-    hamburger.classList.remove('active');
-      // $('.nav-links .black-layer').css('transition-delay', '0.4s');
-      // $('.nav-links .white-layer').css('transition-delay', '0.8s');
+    navlinks.classList.remove("active");
+    setTimeout(() => {
+      blackLayer.style.left = "-100vw";
+    }, 300);
+    setTimeout(() => {
+      whiteLayer.style.left = "-100vw";
+    }, 600);
+    hamburger.classList.remove("active");
   } else {
-    setTimeout(() => { blackLayer.style.right ="0";},500);
-    whiteLayer.style.right ="0";
-    navlinks.classList.add('active');
-    hamburger.classList.add('active');
-      
-    // navlinks.classList.add('black-layer');
-      // $('.nav-links .black-layer').css('transition-delay', '0.4s');
-      // $('.nav-links .white-layer').css('transition-delay', '0s');
+    setTimeout(() => {
+      blackLayer.style.left = "0";
+    }, 300);
+    setTimeout(() => {
+      whiteLayer.style.left = "0";
+    }, 100);
+    setTimeout(() => {
+      navlinks.classList.add("active");
+    }, 600);
+    hamburger.classList.add("active");
   }
 });
-

@@ -1,23 +1,9 @@
-const scroller = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-  // lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
-  // multiplier: 1.4, // Effect Multiplier
-  // reloadOnContextChange: true,
-  // smoothMobile: 0,
-  // touchMultiplier: 3.5,
-  // smartphone: {
-  //     // smooth: true,
-  //     breakpoint: 767
-  // },
-  // tablet: {
-  //     // smooth: true,
-  //     breakpoint: 1024
-  // },
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
 });
-scroller.on('scroll', ({ limit, scroll }) => {
-  const progress = scroll.y / limit.y * 100 
-
+scroll.on('scroll', ({ limit, scroll }) => {
+  let progress = scroll.y / limit.y * 100 
   if(progress<=1){
     myNav.classList.add("nav-transparent");
     myNav.classList.remove("nav-colored");
@@ -41,4 +27,4 @@ scroller.on('scroll', ({ limit, scroll }) => {
   hamburgers.forEach((hamburger) => {
     hamburger.style.backgroundColor = "var(--color-black)";
   });
-})
+});
