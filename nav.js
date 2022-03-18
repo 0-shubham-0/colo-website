@@ -49,12 +49,12 @@ setInterval(countdown, 1000);
 hamburger.addEventListener('click', ()=> {
   if (hamburger.classList.contains("active")) {
     navlinks.classList.remove('active');
-    setTimeout(() => {blackLayer.style.right ="-100vw";},300);
-    setTimeout(() => {whiteLayer.style.right ="-100vw";},600);
+    setTimeout(() => {blackLayer.style.left ="-100vw";},300);
+    setTimeout(() => {whiteLayer.style.left ="-100vw";},600);
     hamburger.classList.remove('active');
   } else {
-    setTimeout(() => { blackLayer.style.right ="0";},300);
-    setTimeout(() => {whiteLayer.style.right ="0";},100);
+    setTimeout(() => { blackLayer.style.left ="0";},300);
+    setTimeout(() => {whiteLayer.style.left ="0";},100);
     setTimeout(() => {navlinks.classList.add('active');},600);
     hamburger.classList.add('active');
   }

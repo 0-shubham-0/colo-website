@@ -51,6 +51,7 @@ ul{
   background-color: rgb(255, 173, 173);
 }
 .accordion {
+  color: var(--color-black);
   position: relative;
   width: 100%;
   padding: 1rem 0rem 1rem 0.5rem;
@@ -140,8 +141,8 @@ ul{
   line-height: 1.5;
 }
 .timeline>.bgText{
-  top: 10%;
-  left: 5%;
+  top: 35vh;
+  right: 0;
 }
 .timeline>.bgText{
   display: flex;
@@ -151,5 +152,5 @@ ul{
   display: flex;
 }
 .timeline>.bgText>span>div{
-  font-size: 14rem;
+  font-size: 9rem;
 }

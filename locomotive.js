@@ -5,14 +5,13 @@ const scroller = new LocomotiveScroll({
   multiplier: 1.4, // Effect Multiplier
   reloadOnContextChange: true,
   smoothMobile: 0,
+  touchMultiplier: 3.5,
   smartphone: {
-    touchMultiplier: 3.5,
-      smooth: true,
+      // smooth: true,
       breakpoint: 767
   },
   tablet: {
-    touchMultiplier: 3.5,
-      smooth: true,
+      // smooth: true,
       breakpoint: 1024
   },
 });
