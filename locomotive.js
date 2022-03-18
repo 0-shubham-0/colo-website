@@ -1,11 +1,6 @@
 const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
-  lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
-  multiplier: 1.4, // Effect Multiplier
-  reloadOnContextChange: true,
-  smoothMobile: 0,
-  touchMultiplier: 3.5,
 });
 scroller.on('scroll', ({ limit, scroll }) => {
   const progress = scroll.y / limit.y * 100 
