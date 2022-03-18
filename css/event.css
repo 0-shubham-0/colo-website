@@ -117,7 +117,7 @@ ul{
   padding: 0 20px;
   font-size: 14px;
   font-weight: 700;
-  cursor: pointer;
+  cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 
 .accordion > section {
