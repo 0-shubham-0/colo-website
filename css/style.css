@@ -103,7 +103,7 @@ html {
   user-select: none;
   font-family: "Hanson", sans-serif;
   color: #213d4e56;
-  -webkit-text-stroke: 5px #213d4e24;
+  -webkit-text-stroke: 5px #192f3d3b;
   -webkit-text-fill-color: transparent;
   letter-spacing: 10px;
   position: absolute;
@@ -117,11 +117,13 @@ html {
 .speaker-content .auto-grid::before,
 .speaker-content .auto-grid::after,
 .accordion>label::before,
-.accordion>label::after {
+.accordion>label::after,
+.main-info-wrap::before,.main-info-wrap::after {
   display: none;
 }
 @media only screen and (max-width: 720px) {
   .bgText {
+    -webkit-text-stroke: 2px;
     font-size: 7rem;
   }
 }
@@ -626,6 +628,10 @@ nav {
   display: flex;
   justify-content: center;
 }
+.main-info-wrap{
+  width: -webkit-fill-available;
+  justify-content: space-between;
+}
 .starts-in{
   font-size: 2em;
   font-weight: 600;
@@ -775,6 +781,7 @@ nav {
   box-shadow: rgb(0, 0, 0) 0px 5px 15px;
 }
 .about > .bgText {
+  -webkit-text-stroke: 5px #ffffff24;
   top: 10%;
   left: 10%;
 }
@@ -1340,7 +1347,7 @@ nav {
 
 .spons-container
 {
-	height: 100%;
+	min-height: 60vh;
 	padding: 15px;
 	margin: 40px auto;
 	display: flex;
@@ -1360,6 +1367,11 @@ nav {
 	padding: 5px 10px;
 	border: 1.5px solid #111;
 	color: #111;
+  transition: filter 0.3s ease-in 0.5s;
+}
+.spons-box:hover{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
 .spons-box:before
@@ -1418,6 +1430,7 @@ nav {
   padding: 1.25rem 0 2rem 0;
 }
 .map-content{
+  color: var(--color-black);
   padding-top: 2em;
   display: flex;
   gap: 2em;
