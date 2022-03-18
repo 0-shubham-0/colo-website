@@ -1,5 +1,3 @@
-
-
 //const navBar = document.querySelector
 var myNav = document.getElementById("mynav");
 var navTexts = document.getElementsByClassName("nav-text");
@@ -46,17 +44,52 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-hamburger.addEventListener('click', ()=> {
+hamburger.addEventListener("click", () => {
   if (hamburger.classList.contains("active")) {
-    navlinks.classList.remove('active');
-    setTimeout(() => {blackLayer.style.left ="-100vw";},300);
-    setTimeout(() => {whiteLayer.style.left ="-100vw";},600);
-    hamburger.classList.remove('active');
+    navlinks.classList.remove("active");
+    setTimeout(() => {
+      blackLayer.style.left = "-100vw";
+    }, 300);
+    setTimeout(() => {
+      whiteLayer.style.left = "-100vw";
+    }, 600);
+    hamburger.classList.remove("active");
   } else {
-    setTimeout(() => { blackLayer.style.left ="0";},300);
-    setTimeout(() => {whiteLayer.style.left ="0";},100);
-    setTimeout(() => {navlinks.classList.add('active');},600);
-    hamburger.classList.add('active');
+    setTimeout(() => {
+      blackLayer.style.left = "0";
+    }, 300);
+    setTimeout(() => {
+      whiteLayer.style.left = "0";
+    }, 100);
+    setTimeout(() => {
+      navlinks.classList.add("active");
+    }, 600);
+    hamburger.classList.add("active");
   }
 });
-
+window.onscroll = function () {
+  console.log(document.documentElement.scrollTop,vh)
+  "use strict";
+  if (document.documentElement.scrollTop<= vh) {
+    myNav.classList.add("nav-transparent");
+    myNav.classList.remove("nav-colored");
+    document.getElementById("logo").src = "./assets/img/colologo.png";
+    for (var i = 0; i < 5; i++) {
+      navTexts[i].classList.remove("nav-txt-black");
+      navTexts[i].classList.add("nav-txt-white");
+    }
+    hamburgers.forEach((hamburger) => {
+      hamburger.style.backgroundColor = "var(--color-white)";
+    });
+  }else{
+  myNav.classList.add("nav-colored");
+  myNav.classList.remove("nav-transparent");
+  document.getElementById("logo").src = "./assets/img/logo.png";
+  for (var i = 0; i < 5; i++) {
+    navTexts[i].classList.remove("nav-txt-white");
+    navTexts[i].classList.add("nav-txt-black");
+  }
+  hamburgers.forEach((hamburger) => {
+    hamburger.style.backgroundColor = "var(--color-black)";
+  });
+}};

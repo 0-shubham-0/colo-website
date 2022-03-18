@@ -24,6 +24,9 @@ ul{
   justify-content: center;
   align-items: center;
 }
+.event-body{
+  padding: 2rem 0;
+}
 .timeline h1{
   font-weight: 700;
   font-size: 2rem;
