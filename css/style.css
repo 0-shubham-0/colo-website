@@ -22,6 +22,7 @@
 /* ||Initialization */
 * {
   margin: 0;
+  /* border: 0.5px solid red;  */
 }
 *::before,
 *::after {
@@ -53,7 +54,6 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-bar-light);
-  var(--accent);
   border-radius: 0.5rem;
 }
 .gradient-text {
@@ -107,6 +107,11 @@ body {
   text-transform: uppercase;
   font-size: 12rem;
 }
+/* @media screen and (max-width: 1000px){
+  .bg-text{
+    
+  }
+} */
 .content-wrap::before,
 .content-wrap::after,
 .nav-main::before,
@@ -114,13 +119,17 @@ body {
 .speaker-content .auto-grid::before,
 .speaker-content .auto-grid::after,
 .accordion>label::before,
-.accordion>label::after {
+.accordion>label::after,
+.card::before,
+.card::after,
+nav::before,
+nav::after {
   display: none;
 }
 @media only screen and (max-width: 720px) {
   .bgText {
     -webkit-text-stroke: 2px;
-    font-size: 5rem;
+    font-size: 2rem;
     right: 0;
   }
 }
@@ -134,6 +143,7 @@ nav {
   position: fixed;
   width: 100vw;
   height: 80px;
+  line-height: 80px;
   z-index: 999;
 }
 .nav-colored {
@@ -181,7 +191,7 @@ nav {
   padding: 0 2rem;
   cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
-.nav-text:hover{
+.glow:hover{
   text-shadow: var(--color-white) 1px 0 10px;
 }
 .nav-txt-black {
@@ -328,14 +338,24 @@ nav {
   width: 0%;
 }
 .nav-main {
-  margin: 0 var(--nav-margin);
+  justify-content: space-around;
   transition: 250ms ease-out;
 }
 .nav-img {
   box-shadow: var(--color-white);
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   transition: 250ms ease-out;
+}
+
+@media screen and (max-width: 400px){
+  .nav-img{
+    width: 20px;
+    height: 20px;
+  }
+  .nav-text-title{
+    font-size: small;
+  }
 }
 .dot {
   width: 10px;
@@ -405,6 +425,9 @@ nav {
     text-align: center;
     transition: right 0.8s cubic-bezier(0.595, 0.03, 0, 0.88),
     opacity 0.5s ease;
+  }
+  .nav-main {
+    justify-content: space-between;
   }
   .nav-links > a {
     color: var(--color-white);
@@ -778,6 +801,7 @@ nav {
   box-shadow: rgb(0, 0, 0) 0px 5px 15px;
 }
 .about > .bgText {
+  overflow: hidden;
   -webkit-text-stroke-color: #ffffff13;
   top: 10%;
   left: 10%;
@@ -814,6 +838,7 @@ nav {
     display: none;
   }
   .about > .bgText {
+    font-size: 7rem;
     top: 25%;
     left: 0;
   }
@@ -842,6 +867,11 @@ nav {
   position: relative;
 
 }
+@media screen and (max-width: 350px){
+  .events{
+    padding: 0;
+  }
+}
 .events > .content-wrap {
   flex-direction: column;
 }
@@ -865,9 +895,9 @@ nav {
   content: "";
 
   left: 0;
-  bottom: 1em;
+  bottom: 0.99em;
   width: 100%;
-  height: 2.5px;
+  height: 3px;
   background-color: var(--color-two);
 
   transform: scaleX(0.2);
@@ -894,13 +924,11 @@ nav {
   padding-bottom: 2em;
 }
 .events > .bgText{
-  left:calc(100vw - 5rem);
-  top: 0;
-}
-.events > .bgText > div {
   font-size: 8rem;
-  transform-origin: center left;
-  transform: rotate(90deg);
+  left:calc(100vw - 5.5rem);
+  transform-origin:center left;
+  top: 0;
+  transform:rotate(90deg);
 }
 @media screen and (max-width: 1100px) {
   .card {
@@ -1128,6 +1156,14 @@ nav {
   max-width: 55rem;
   padding: 2rem 1.5rem;
   margin: 0 auto;
+}
+@media only screen and (max-width: 350px){
+  .speaker-content{
+    border: 0;
+  }
+  .speaker .content-wrap{
+    padding: 0;
+  }
 }
 .speaker header {
   display: flex;
@@ -1417,7 +1453,7 @@ nav {
 /* ||End Sponsors CSS|| *
 /* ||Map CSS */
 .map{
-  padding: 0 10em 2em 10em;
+  padding: 4em 10em;
   display: flex;
   justify-content: space-around;
   gap: 2em;

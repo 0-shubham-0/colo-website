@@ -4,17 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>COLOSSEUM-DBIT</title>
   <!-- 3rd party css -->
   <link href='https://css.gg/chevron-down.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
   <!-- local css -->
   <link rel="stylesheet" href="css/event.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="./scss/main.css">
+  <link rel="shortcut icon" href="./assets/img/colologo.png" type="image/x-icon">
 
   <!-- local js -->
   <script defer src="nav.js"></script>
@@ -25,14 +26,14 @@
   <nav id="mynav" class="nav-transparent">
     <div class="nav-main">
       <a href="#" class="nav-head">
-        <img height="10px" width="10px" id="logo" src="./assets/img/colologo.png" alt="logo" class="nav-img">
-        <p class="nav-text nav-txt-white">COLOSSEUM</p>
+        <img id="logo" src="./assets/img/colologo.png" alt="logo" class="nav-img">
+        <p class="nav-text glow nav-text-title nav-txt-white">COLOSSEUM</p>
       </a>
       <div class="nav-content">
         <div class="nav-links">
-          <a class="nav-text nav-txt-white" href="#">Events</a>
-          <a class="nav-text nav-txt-white" href="#">Speakers</a>
-          <a class="nav-text nav-txt-white" href="#">Timeline</a>
+          <a class="nav-text glow nav-txt-white" href="#">Events</a>
+          <a class="nav-text glow nav-txt-white" href="#">Speakers</a>
+          <a class="nav-text glow nav-txt-white" href="#">Timeline</a>
           <a class="nav-text nav-txt-white" href="#">
             <div class="box-3">
               <div class="btn btn-three">
@@ -125,9 +126,7 @@
 
   <section class="events">
     <div class="bgText">
-      <div>
-        events
-      </div>
+      events
     </div>
     <div class="content-wrap">
       <header>
@@ -138,7 +137,7 @@
           <div class="post">
             <div class="header_post">
               <img
-                src="https://images.pexels.com/photos/2529973/pexels-photo-2529973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                src="./assets/img/Events/API poster-cropped.png"
                 alt="">
             </div>
             <div class="body_post">
@@ -171,7 +170,7 @@
           <div class="post">
             <div class="header_post">
               <img
-                src="https://images.pexels.com/photos/2529973/pexels-photo-2529973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                src="./assets/img/Events/arch linux poster-cropped.png"
                 alt="">
             </div>
 
@@ -207,7 +206,7 @@
         <div class="container">
           <div class="post">
             <div class="header_post">
-              <img src="https://m7mmed.vercel.app/images/cloud_yin.gif" alt="">
+              <img src="./assets/img/Events/Showdown of Boats.png" alt="">
             </div>
 
             <div class="body_post">
@@ -339,17 +338,17 @@
           <li class="date active" data-filter="All">
             <div>All Events</div>
           </li>
-          <li class="date" data-filter="Day1">
-            <div>Day 1</div>
-            <div>1st March, 2022</div>
+          <li class="date" data-filter="Week1">
+            <div>Week 1</div>
+            <div>21st March-26th March, 2022</div>
           </li>
-          <li class="date" data-filter="Day2">
-            <div>Day 2</div>
-            <div>2nd March, 2022</div>
+          <li class="date" data-filter="Week2">
+            <div>Week 2</div>
+            <div>28th March-2nd April, 2022</div>
           </li>
         </ul>
         <ul id="eventList">
-          <li class="eventList" data-item="Day1">
+          <li class="eventList" data-item="Week1">
             <ul class="event">
               <li class="accordion">
                 <input id="toggle1" type="radio" class="accordion-toggle" name="toggle" />
@@ -557,7 +556,7 @@
               </li>
             </ul>
           </li>
-          <li class="eventList" data-item="Day2">
+          <li class="eventList" data-item="Week2">
             <ul class="event">
               <li class="accordion">
                 <input id="toggle13" type="radio" class="accordion-toggle" name="toggle" />
@@ -777,7 +776,7 @@
     <div class="mapouter">
       <div class="gmap_canvas">
         <iframe width="600" height="500" id="gmap_canvas"
-          src="https://maps.google.com/maps?q=Don%20Bosco%20Institute%20of%20Techno&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=Don%20Bosco%20Institute%20of%20Technology&t=&z=13&ie=UTF8&iwloc=&output=embed"
           frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         <style>
           .mapouter {
