@@ -93,3 +93,15 @@ window.onscroll = function () {
     hamburger.style.backgroundColor = "var(--color-black)";
   });
 }};
+
+
+
+var scrollToTopBtn = document.getElementById("scrollToTopBtn")
+var rootElement = document.documentElement
+scrollToTopBtn.addEventListener("click", scrollToTop)
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}

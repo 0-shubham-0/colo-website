@@ -634,6 +634,9 @@ nav {
 
 
 /* ||Time left CSS|| */
+.time{
+  cursor: url("../assets/img/cursor-white.png"),auto;
+}
 .time>.content-wrap{
   background: #1c1c1c;
   color: var(--color-white);
@@ -715,6 +718,9 @@ nav {
 
 
 /* ||About section CSS|| */
+.about{
+  cursor: url("../assets/img/cursor-white.png"),auto;
+}
 .about>.content-wrap{
   position: relative;
   gap: 10em;
@@ -1144,6 +1150,9 @@ nav {
 
 /* speakers */
 /* Globals */
+.speaker{
+  cursor: url("../assets/img/cursor-white.png"),auto;
+}
 @media only screen and (max-width: 1100px) {
   .speaker-content {
     padding: 0;
@@ -1343,6 +1352,9 @@ nav {
 
 
 /* sponsors */
+.spons{
+  cursor: url("../assets/img/cursor-white.png"),auto;
+}
 @media screen and (max-width: 750px){
   .spons-box  {
     flex: 0 1 100px;
@@ -1497,6 +1509,7 @@ nav {
   }
 }
 .footer-distributed {
+  cursor: url("../assets/img/cursor-white.png"),auto;
   background-color: #2d2a30;
   box-sizing: border-box;
   width: 100%;
@@ -1657,4 +1670,19 @@ nav {
   .footer-distributed .footer-center i {
     margin-left: 0;
   }
+}
+
+
+#scrollToTopBtn {
+  cursor: url("../assets/img/hand-cursor-white.png"),pointer;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  position: absolute;
+  left: 95%;
+  bottom: 25px;
 }
