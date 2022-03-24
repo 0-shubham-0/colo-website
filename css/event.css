@@ -120,7 +120,7 @@ ul{
   font-weight: 700;
   cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
-
+.register-link{}
 .accordion > section {
   max-height: 0;
   overflow: hidden;

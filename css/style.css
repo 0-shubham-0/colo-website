@@ -133,6 +133,9 @@ nav::after {
     right: 0;
   }
 }
+.font-big{
+  font-size: 2em;
+}
 /* ||End Initialization|| */
 
 /* ||Navigation Bar CSS|| */
@@ -323,11 +326,6 @@ nav {
 
 .nav-head > p {
   margin-bottom: 0%;
-}
-.nav-head > p:hover,
-.nav-links > a:hover {
-  /* glow effect nav */
-  
 }
 .nav-head > p:focus-within::before,
 .nav-links > a:focus-within::before {
