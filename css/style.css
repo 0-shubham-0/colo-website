@@ -77,7 +77,7 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  animation: anim 15s infinite alternate;
+  animation: anim 12s infinite alternate;
 }
 @keyframes anim {
   0% {
@@ -123,7 +123,9 @@ body {
 .card::before,
 .card::after,
 nav::before,
-nav::after {
+nav::after,
+.eventList::before,
+.eventList::after {
   display: none;
 }
 @media only screen and (max-width: 720px) {
@@ -134,7 +136,7 @@ nav::after {
   }
 }
 .font-big{
-  font-size: 2em;
+  font-size: 1.5em;
 }
 /* ||End Initialization|| */
 
