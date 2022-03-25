@@ -12,7 +12,6 @@
 11. Map CSS
 12. Footer CSS
 */
-
 /* **************************************************************** */
 
 /* ||Import|| */
@@ -1508,4 +1507,29 @@ nav {
   position: sticky;
   bottom: 20px;
   left: 80%;
+}
+
+
+
+#videoDiv {
+  width:100%; 
+  max-width:1200px; 
+  margin:auto; 
+  display:block; 
+  position: relative;
+} 
+#video{
+  width:100%; 
+  height:auto 
+} 
+#videoMessage { 
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+  height: 100%;
 }
