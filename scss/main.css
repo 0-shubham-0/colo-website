@@ -12,8 +12,8 @@
   }
 }
 .container {
-  width: 80%;
-  height: 500px;
+  max-width: 100%;
+  height: 400px;
   background-color: #ffffff;
   color: black;
   display: -webkit-box;
@@ -28,7 +28,7 @@
 }
 
 .container .post {
-  width: 350px;
+  width: 300px;
   height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,22 +36,23 @@
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
 }
 
 .container .post:hover .header_post {
-  margin-top: -20px;
+  /* margin-top: -20px; */
 }
 
 .container .post:hover .body_post {
   height: 50%;
+  display:flex;
 }
 
 .container .post:hover img {
-  -webkit-transform: translatey(-10px) translatex(-5px) scale(1.05);
-          transform: translatey(-10px) translatex(-5px) scale(1.05);
+  /* -webkit-transform: translatey(-10px) translatex(-5px) scale(1.05);
+  transform: translatey(-10px) translatex(-5px) scale(1.05); */
 }
 
 .container .post .header_post {
@@ -80,12 +81,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
   transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
   cursor: url("../assets/img/hand-cursor.png"),pointer;
@@ -114,8 +116,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -128,8 +130,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
@@ -149,8 +151,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .container .post .body_post .post_content .container_infos .container_tags span {
@@ -179,8 +181,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 

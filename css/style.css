@@ -892,6 +892,7 @@ nav {
 }
 .events header{
   text-align: center;
+  padding-bottom: 4em;
 }
 .center-expand-underline {
   padding: 1em 0 2em 0;
@@ -926,9 +927,17 @@ nav {
   transform: scaleX(0.8);
 }
 .card {
-  display: flex;
-  gap: 2em;
+  display: grid;
+  grid-gap: 6em;
+  margin: 0 auto;
   padding-bottom: 2em;
+  
+}
+@media (min-width: 800px) {
+  .card { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1300px) {
+  .card { grid-template-columns: repeat(3, 1fr); }
 }
 .events > .bgText{
   font-size: 8rem;
