@@ -1696,7 +1696,7 @@ nav {
   font-size: 16px;
   line-height: 48px;
   width: 48px;
-  position: absolute;
-  left: 95%;
-  bottom: 25px;
+  position: sticky;
+  bottom: 20px;
+  left: 80%;
 }
