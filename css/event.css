@@ -46,6 +46,7 @@ ul{
   flex: 1;
   padding: 1em 0;
   min-width: 100px;
+  text-align: center;
   cursor: url("../assets/img/hand-cursor.png"), pointer;
   background-color: #8b24d43a;
   transition: background-color 0.3s ease-in;
@@ -89,7 +90,7 @@ ul{
 
 .date.active {
   position: relative;
-  background-color: #8b24d4ce;
+  background-color: var(--color-one);
 }
 .date.active::after {
   display: block;
@@ -100,7 +101,7 @@ ul{
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 8px solid #8c24d4
+  border-top: 8px solid var(--color-one);
 }
 
 .accordion > .accordion-toggle {
@@ -121,7 +122,6 @@ ul{
   font-weight: 700;
   cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
-.register-link{}
 .accordion > section {
   max-height: 0;
   overflow: hidden;
@@ -141,7 +141,7 @@ label>.gg-chevron-down::after {
 }
 
 .accordion > .accordion-toggle:checked ~ section {
-  max-height: 400px;
+  max-height: 600px;
 }
 
 .accordion > section > p {

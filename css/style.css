@@ -373,14 +373,14 @@ nav {
 
 .nav-links a:nth-child(1):hover ~ .dot {
   width: 6ch;
-  transform: translateX(-745px);
+  transform: translateX(-645px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 .nav-links a:nth-child(2):hover ~ .dot {
   width: 8ch;
-  transform: translateX(-535px);
+  transform: translateX(-435px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -388,7 +388,7 @@ nav {
 
 .nav-links a:nth-child(3):hover ~ .dot {
   width: 7ch;
-  transform: translateX(-345px);
+  transform: translateX(-245px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -574,7 +574,7 @@ nav {
   line-height: 50px;
   height: 50px;
   text-align: center;
-  width: 250px;
+  width: 150px;
   cursor: url("../assets/img/hand-cursor.png"),pointer;
 }
 .btn-three {
@@ -969,7 +969,12 @@ nav {
     width: 80%;
   }
 }
-
+.events .btn{
+  width: 80px;
+}
+.events .btn-three::before{
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
 /* speakers */
 /* Globals */
 .speaker{
