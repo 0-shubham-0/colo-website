@@ -26,6 +26,8 @@ ul{
 }
 .event-body{
   padding: 2rem 0;
+  width: 80vw;
+  max-width: 900px;
 }
 .timeline h1{
   font-weight: 700;
@@ -49,6 +51,7 @@ ul{
   text-align: center;
   cursor: url("../assets/img/hand-cursor.png"), pointer;
   background-color: #8b24d43a;
+  color: var(--color-black);
   transition: background-color 0.3s ease-in;
 }
 .date:hover {
@@ -109,7 +112,9 @@ ul{
   opacity: 0;
   display: none;
 }
-
+.date.active{
+  color: var(--color-white);
+}
 .accordion > label {
   position: relative;
   display: flex;

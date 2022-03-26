@@ -44,6 +44,9 @@ body {
   -ms-user-select: none;
   cursor: url("../assets/img/cursor.png"),auto;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -928,7 +931,9 @@ nav {
   transform: scaleX(0.8);
 }
 .card {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   grid-gap: 6em;
   margin: 0 auto;
   padding-bottom: 2em;
@@ -970,10 +975,17 @@ nav {
   }
 }
 .events .btn{
-  width: 80px;
+  width: 140px;
 }
 .events .btn-three::before{
   border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.container_infos::before,
+.container_infos::after{
+  width: 15px;
+}
+.container_infos>.postedBy{
+  text-align: center;
 }
 /* speakers */
 /* Globals */
@@ -1225,6 +1237,8 @@ nav {
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
+  width: 90vw;
+  max-width: 1000px;
 	flex-wrap: wrap;
 	align-content: center;
 	gap: 5px;
