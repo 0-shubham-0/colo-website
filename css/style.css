@@ -15,7 +15,7 @@
 /* **************************************************************** */
 
 /* ||Import|| */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap');
 @import "vars_og.css";
 /* ||End Import|| */
 /* ||Initialization */
@@ -33,8 +33,9 @@
 }
 body {
   position: relative;
-  font-family: "Oswald", sans-serif;
+  font-family: droid-serif,serif;
   font-weight: 400;
+  font-style: normal;
   color: white;
   background-color: #1c1c1c;
   overflow-x: hidden;
@@ -59,6 +60,9 @@ html{
   border-radius: 0.5rem;
 }
 .gradient-text {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
   /* Fallback color. */
   background-color: var(--color-five);
   /* the gradient. */
@@ -127,7 +131,9 @@ html{
 nav::before,
 nav::after,
 .eventList::before,
-.eventList::after {
+.eventList::after,
+.container_infos::before,
+.container_infos::after {
   display: none;
 }
 @media only screen and (max-width: 720px) {
@@ -144,8 +150,9 @@ nav::after,
 
 /* ||Navigation Bar CSS|| */
 nav {
-  font-family: "Hanson", sans-serif;
-  font-size: 20px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
   box-shadow: 2rem var(--color-black);
   position: fixed;
   width: 100vw;
@@ -1008,10 +1015,7 @@ nav {
 .events .btn-three::before{
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
-.container_infos::before,
-.container_infos::after{
-  width: 15px;
-}
+
 .container_infos>.postedBy{
   text-align: center;
 }
