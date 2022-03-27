@@ -136,6 +136,9 @@ ul{
   transition: max-height 0.8s;
   transition: 0.3s all;
 }
+.accordion a{
+  cursor: url("../assets/img/cursor.png"),auto;
+}
 label>.gg-chevron-down::after {  
   transform: rotate(45deg);
   transition: transform 0.5s ease;

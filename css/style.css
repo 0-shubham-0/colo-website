@@ -1423,7 +1423,9 @@ nav {
   font-size: 2em;
   margin: 0;
 }
-
+footer a{
+  cursor: url("../assets/img/hand-cursor-white.png"),pointer;
+}
 /* Footer links */
 
 .footer-distributed .footer-links {
