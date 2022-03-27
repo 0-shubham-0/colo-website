@@ -18,8 +18,14 @@ function mobileMenu() {
 navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
 function closeMenu() {
-  hamburger.classList.remove("active");
   navlinks.classList.remove("active");
+  setTimeout(() => {
+    blackLayer.style.left = "-100vw";
+  }, 300);
+  setTimeout(() => {
+    whiteLayer.style.left = "-100vw";
+  }, 600);
+  hamburger.classList.remove("active");
 }
 
 const countdown = () => {

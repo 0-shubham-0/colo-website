@@ -150,9 +150,9 @@ nav::after,
 
 /* ||Navigation Bar CSS|| */
 nav {
-  font-family: "League Spartan", sans-serif;
+  font-family: "Hanson", sans-serif;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 18px;
   box-shadow: 2rem var(--color-black);
   position: fixed;
   width: 100vw;
@@ -356,7 +356,6 @@ nav {
   height: 50px;
   transition: 250ms ease-out;
 }
-
 @media screen and (max-width: 400px){
   .nav-img{
     width: 20px;
@@ -367,7 +366,7 @@ nav {
   }
 }
 .dot {
-  width: 10px;
+  width: 7ch;
   height: 6px;
   position: absolute;
   right: 0;
@@ -380,24 +379,20 @@ nav {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 .nav-links a:nth-child(1):hover ~ .dot {
-  width: 6ch;
-  transform: translateX(-645px);
+  transform: translateX(-610px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 .nav-links a:nth-child(2):hover ~ .dot {
   width: 8ch;
-  transform: translateX(-435px);
+  transform: translateX(-425px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
-
 .nav-links a:nth-child(3):hover ~ .dot {
-  width: 7ch;
   transform: translateX(-245px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -406,17 +401,33 @@ nav {
 
 
 @media screen and (max-width: 1000px) {
+  nav{
+    height: 50px;
+  }
   header {
     font-size: 16px;
   }
   .nav-main {
+    line-height: 50px;
     margin: 0 5px;
   }
   .nav-links {
     column-gap: 5px;
   }
 }
-@media only screen and (max-width: 1110px) {
+@media only screen and (max-width: 1300px) {
+  nav{
+    height: 60px;
+  }
+  .nav-main{
+    line-height: 60px;
+  }
+  .nav-links .btn{
+    line-height: 40px;
+    height:40px
+  }
+}
+  @media only screen and (max-width: 1110px) {
   .nav-links {
     position: fixed;
     left: -100%;
@@ -972,7 +983,6 @@ nav {
   grid-gap: 6em;
   margin: 0 auto;
   padding-bottom: 2em;
-  
 }
 @media (min-width: 800px) {
   .card { grid-template-columns: repeat(2, 1fr); }
@@ -1010,9 +1020,10 @@ nav {
   }
 }
 .events .btn{
-  width: 140px;
+  width: 120px;
 }
 .events .btn-three::before{
+  border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -1536,16 +1547,16 @@ nav {
   left: 99%;
 }
 
-.social-buttons {
+.scl-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   margin-top: 10px;
 }
-.social-buttons__button {
+.scl-buttons__button {
   margin: 30px 5px 0;
 }
-.social-button {
+.scl-button {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1558,105 +1569,106 @@ nav {
   background: #1c1c1c;
   text-align: center;
 }
-.social-button::after {
+.scl-button::after {
   content: '';
   position: absolute;
-  top: -1px;
+  top: 50%;
   left: 50%;
+  transform: translateY(-50%);
   display: block;
   width: 0;
   height: 0;
   border-radius: 100%;
   transition: 0.3s;
 }
-.social-button:focus, .social-button:hover {
+.scl-button:focus, .scl-button:hover {
   color: #fff;
 }
-.social-button:focus::after, .social-button:hover::after {
+.scl-button:focus::after, .scl-button:hover::after {
   width: calc(100% + 2px);
   height: calc(100% + 2px);
   margin-left: calc(-50% - 1px);
 }
-.social-button i, .social-button svg {
+.scl-button i, .scl-button svg {
   position: relative;
   z-index: 1;
   transition: 0.3s;
 }
-.social-button i {
+.scl-button i {
   font-size: 28px;
 }
-.social-button svg {
+.scl-button svg {
   height: 40%;
   width: 40%;
 }
-.social-button--mail {
+.scl-button--mail {
   color: #0072c6;
 }
-.social-button--mail::after {
+.scl-button--mail::after {
   background: #0072c6;
 }
-.social-button--facebook {
+.scl-button--facebook {
   color: #3b5999;
 }
-.social-button--facebook::after {
+.scl-button--facebook::after {
   background: #3b5999;
 }
-.social-button--linkedin {
+.scl-button--linkedin {
   color: #0077b5;
 }
-.social-button--linkedin::after {
+.scl-button--linkedin::after {
   background: #0077b5;
 }
-.social-button--github {
+.scl-button--github {
   color: #6e5494;
 }
-.social-button--github::after {
+.scl-button--github::after {
   background: #6e5494;
 }
-.social-button--codepen {
+.scl-button--codepen {
   color: #212121;
 }
-.social-button--codepen::after {
+.scl-button--codepen::after {
   background: #212121;
 }
-.social-button--steam {
+.scl-button--steam {
   color: #7da10e;
 }
-.social-button--steam::after {
+.scl-button--steam::after {
   background: #7da10e;
 }
-.social-button--snapchat {
+.scl-button--snapchat {
   color: #eec900;
 }
-.social-button--snapchat::after {
+.scl-button--snapchat::after {
   background: #eec900;
 }
-.social-button--twitter {
+.scl-button--twitter {
   color: #55acee;
 }
-.social-button--twitter::after {
+.scl-button--twitter::after {
   background: #55acee;
 }
-.social-button--instagram {
+.scl-button--instagram {
   color: #e4405f;
 }
-.social-button--instagram::after {
+.scl-button--instagram::after {
   background: #e4405f;
 }
-.social-button--npmjs {
+.scl-button--npmjs {
   color: #c12127;
 }
-.social-button--npmjs::after {
+.scl-button--npmjs::after {
   background: #c12127;
 }
-.social-button--youtube {
+.scl-button--youtube {
   color: #ff3c41;
 }
-.social-button--youtube::after {
+.scl-button--youtube::after {
   background: #ff3c41;
 }
 @media (max-width: 880px){
-  .social-buttons{
+  .scl-buttons{
     justify-content: center;
   }
 }
