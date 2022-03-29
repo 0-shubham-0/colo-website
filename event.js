@@ -31,3 +31,12 @@ var allRadios = document.getElementsByName('toggle');
                 }
             };
         }
+// var millisecs = 10;
+// var refreshIntervalId = setInterval(function() {
+//     console.log('hello')
+//     var $registered_number = $('#registered-number');
+//     $registered_number.text(parseInt($registered_number.text())+1);
+//     if ($badge.text()==100){
+//         clearInterval(refreshIntervalId);
+//     }
+// }, millisecs);
