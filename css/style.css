@@ -496,7 +496,7 @@ nav {
 
 /* ||First section CSS|| */
 .first-section>.content-wrap {
-  background: var(--transparent-overlay), url("../assets/img/hero1.jpg");
+  background: var(--transparent-overlay), url("../assets/img/hero1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
