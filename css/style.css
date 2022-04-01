@@ -1280,7 +1280,6 @@ nav {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row;
   width: 90vw;
   max-width: 1000px;
 	flex-wrap: wrap;
@@ -1289,8 +1288,7 @@ nav {
 }
 .spons-box
 {
-	height: 200px;
-  width: 200px;
+	
   margin: 15px;
 	position: relative;
 	display: inline-block;
@@ -1298,6 +1296,10 @@ nav {
 	border: 1.5px solid #fff;
 	color: #111;
   transition: filter 0.3s ease-in 0.5s;
+}
+.spons-box img{
+  position: relative;
+  top: 7px;
 }
 .spons-box:before
 {

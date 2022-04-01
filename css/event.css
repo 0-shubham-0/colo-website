@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: flex-start;
   background: linear-gradient( #f0f0f0, #dfbfa5, #f0f0f0);
+  padding: 0;
 
 }
 ul{
@@ -16,6 +17,12 @@ ul{
   flex: 1;
   z-index: 1;
 }
+
+@media only screen and (max-width: 480px){
+  .timeline-one{
+    width: 50%;
+  }
+}
 .event-body,
 .date,
 .event {
@@ -23,6 +30,7 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 2em;
 }
 .event-body{
   padding: 2rem 0;
@@ -47,7 +55,6 @@ ul{
 .date {
   flex: 1;
   padding: 1em 0;
-  min-width: 100px;
   text-align: center;
   cursor: url("../assets/img/hand-cursor.png"), pointer;
   background-color: #8b24d43a;
