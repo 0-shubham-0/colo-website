@@ -17,6 +17,7 @@
 /* ||Import|| */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Montserrat:wght@200;300;400;500&display=swap');
 @import "vars_og.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&display=swap');
 /* ||End Import|| */
 /* ||Initialization */
 * {
@@ -33,7 +34,7 @@
 }
 body {
   position: relative;
-  font-family: droid-serif,serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -352,8 +353,8 @@ nav {
 }
 .nav-img {
   box-shadow: var(--color-white);
-  width: 50px;
-  height: 50px;
+  width: 73px;
+  height: 60px;
   transition: 250ms ease-out;
 }
 @media screen and (max-width: 400px){
