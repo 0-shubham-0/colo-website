@@ -61,6 +61,26 @@ ul{
   color: var(--color-black);
   transition: background-color 0.3s ease-in;
 }
+.date-week1::after{
+  content: '21st March - 26th March, 2022';
+}
+.date-week2::after{
+  content: '28th March - 2nd April, 2022';
+}
+.date-week3::after{
+  content: '4th April - 6th April, 2022';
+}
+@media screen and (max-width:700px){
+  .date-week1::after{
+    content: '21st-26th March';
+  }
+  .date-week2::after{
+    content: '28th March - 2nd April';
+  }
+  .date-week3::after{
+    content: '4th-6th April';
+  }
+}
 .date:hover {
   background-color: rgb(255, 173, 173);
 }
