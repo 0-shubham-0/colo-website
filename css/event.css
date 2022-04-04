@@ -18,11 +18,6 @@ ul{
   z-index: 1;
 }
 
-@media only screen and (max-width: 480px){
-  .timeline-one{
-    width: 50%;
-  }
-}
 .event-body,
 .date,
 .event {
@@ -198,4 +193,13 @@ label>.gg-chevron-down::after {
 }
 .timeline>.bgText>span>div{
   font-size: 9rem;
+}
+
+@media only screen and (max-width: 480px){
+  .timeline-one{
+    width: 50%;
+  }
+  .event, .event-body{
+    width: 90vw;
+  }
 }
